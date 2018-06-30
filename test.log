@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.5.19)  30 JUN 2018 11:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.5.19)  30 JUN 2018 13:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -10,8 +10,8 @@ Babel <3.18> and hyphenation patterns for 6 language(s) loaded.
 Document Class: XJTUthesis 
 (e:/Program Files/TexLive2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(e:/Program Files/TexLive2018/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@section=\count81
@@ -293,7 +293,19 @@ File: ctexopts.cfg 2018/01/28 v2.4.12 Option configuration file (CTEX)
 (e:/Program Files/TexLive2018/texmf-dist/tex/latex/ctex/engine/ctex-engine-pdft
 ex.def
 File: ctex-engine-pdftex.def 2018/01/28 v2.4.12 (pdf)LaTeX adapter (CTEX)
- (e:/Program Files/TexLive2018/texmf-dist/tex/latex/cjk/texinput/CJK.sty
+
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/cjk/texinput/CJKutf8.sty
+Package: CJKutf8 2015/04/18 4.8.4
+
+(e:/Program Files/TexLive2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/cjk/texinput/CJK.sty
 Package: CJK 2015/04/18 4.8.4
 
 (e:/Program Files/TexLive2018/texmf-dist/tex/latex/cjk/texinput/mule/MULEenc.st
@@ -369,6 +381,9 @@ Now handling font encoding C62 ...
 LaTeX Info: Redefining \selectfont on input line 755.
 \CJK@indent=\box42
 )
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+))
 (e:/Program Files/TexLive2018/texmf-dist/tex/latex/cjkpunct/CJKpunct.sty
 Package: CJKpunct 2016/05/14 4.8.4
 \CJKpunct@cnta=\count179
@@ -387,9 +402,6 @@ Package: CJKpunct 2016/05/14 4.8.4
 (e:/Program Files/TexLive2018/texmf-dist/tex/latex/cjk/texinput/CJKspace.sty
 Package: CJKspace 2015/04/18 3.8.0
 )
-(e:/Program Files/TexLive2018/texmf-dist/tex/latex/cjk/texinput/standard.bdg
-File: standard.bdg 2015/04/18 4.8.4
-)
 (e:/Program Files/TexLive2018/texmf-dist/tex/latex/ctex/ctexspa.def
 File: ctexspa.def 2018/01/28 v2.4.12 Space info for CJKpunct (CTEX)
 )
@@ -403,7 +415,7 @@ Package: CJKulem 2015/04/18 4.8.4
 \UL@box=\box43
 \UL@hyphenbox=\box44
 \UL@skip=\skip49
-\UL@hook=\toks14
+\UL@hook=\toks16
 \UL@height=\dimen135
 \UL@pe=\count184
 \UL@pixel=\dimen136
@@ -523,8 +535,8 @@ Package: zhnumber 2018/01/28 v2.6 Typesetting numbers with Chinese glyphs
 . Defining command \zhnumsetup with sig. '+m' on line 934.
 .................................................
 
-(e:/Program Files/TexLive2018/texmf-dist/tex/latex/zhnumber/zhnumber-gbk.cfg
-File: zhnumber-gbk.cfg 2018/01/28 v2.6 Chinese numerals with GBK encoding
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+File: zhnumber-utf8.cfg 2018/01/28 v2.6 Chinese numerals with UTF8 encoding
 ))
 .................................................
 . LaTeX info: "xparse/define-command"
@@ -542,9 +554,9 @@ ese.def
 File: ctex-scheme-chinese.def 2018/01/28 v2.4.12 Chinese scheme for generic (CT
 EX)
 
-(e:/Program Files/TexLive2018/texmf-dist/tex/latex/ctex/config/ctex-name-gbk.cf
-g
-File: ctex-name-gbk.cfg 2018/01/28 v2.4.12 Caption with encoding GBK (CTEX)
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.c
+fg
+File: ctex-name-utf8.cfg 2018/01/28 v2.4.12 Caption with encoding UTF8 (CTEX)
 )) (e:/Program Files/TexLive2018/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
@@ -616,17 +628,71 @@ K.sfd}{Unicode.sfd})
 )))
 (e:/Program Files/TexLive2018/texmf-dist/tex/latex/ctex/config/ctex.cfg
 File: ctex.cfg 2018/01/28 v2.4.12 Configuration file (CTEX)
+)
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/03/24 v5.7 Page Geometry
+
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(e:/Program Files/TexLive2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(e:/Program Files/TexLive2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count189
+\Gm@cntv=\count190
+\c@Gm@tempcnt=\count191
+\Gm@bindingoffset=\dimen143
+\Gm@wd@mp=\dimen144
+\Gm@odd@mp=\dimen145
+\Gm@even@mp=\dimen146
+\Gm@layoutwidth=\dimen147
+\Gm@layoutheight=\dimen148
+\Gm@layouthoffset=\dimen149
+\Gm@layoutvoffset=\dimen150
+\Gm@dimlist=\toks18
+)
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-(e:/Program Files/TexLive2018/texmf-dist/tex/latex/cjk/texinput/extended.enc
-File: extended.enc 2015/04/18 4.8.4
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
 )
-(e:/Program Files/TexLive2018/texmf-dist/tex/latex/cjk/texinput/extended.chr
-File: extended.chr 2015/04/18 4.8.4
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-
-LaTeX Warning: Unused global option(s):
-    [UTF8].
-
+Package color Info: Driver file: pdftex.def on input line 147.
+))
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
+File: UTF8.bdg 2015/04/18 4.8.4
+)
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
+File: UTF8.enc 2015/04/18 4.8.4
+)
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
+File: UTF8.chr 2015/04/18 4.8.4
+)
 (./test.aux)
 \openout1 = `test.aux'.
 
@@ -710,50 +776,147 @@ LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
  ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 5.
-LaTeX Font Info:    Try loading font information for C19+zhsong on input line 6
-.
 
-(e:/Program Files/TexLive2018/texmf-dist/tex/latex/zhmetrics/c19zhsong.fd
-File: c19zhsong.fd 2009/09/23 4.8.2
-)<<c1974.cmap>><<c1934.cmap>><<c1920.cmap>><<c1977.cmap>><<c1913.cmap>><<c1978.
-cmap>><<c1926.cmap>>
-Package CJKpunct Info: use punctuation spaces for family 'zhsong' with punctsty
-le (quanjiao) on input line 6.
-<<c1924.cmap>><<c1940.cmap>><<c1915.cmap>><<c1925.cmap>><<c1975.cmap>><<c1929.c
-map>><<c1945.cmap>><<c1943.cmap>><<c1916.cmap>> [1
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(73.97733pt, 449.55322pt, 73.97733pt)
+* v-part:(T,H,B)=(85.35826pt, 688.5567pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=449.55322pt
+* \textheight=688.5567pt
+* \oddsidemargin=1.70734pt
+* \evensidemargin=1.70734pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+(e:/Program Files/TexLive2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count192
+\scratchdimen=\dimen153
+\scratchbox=\box48
+\nofMPsegments=\count193
+\nofMParguments=\count194
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count195
+\MPscratchDim=\dimen154
+\MPnumerator=\count196
+\makeMPintoPDFobject=\count197
+\everyMPtoPDFconversion=\toks20
+) (e:/Program Files/TexLive2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+(e:/Program Files/TexLive2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-] (./test.aux) ) 
+(e:/Program Files/TexLive2018/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(e:/Program Files/TexLive2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(e:/Program Files/TexLive2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(e:/Program Files/TexLive2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(e:/Program Files/TexLive2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(e:/Program Files/TexLive2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package epstopdf Info: Source file: <figures//XJTU_name.eps>
+(epstopdf)                    date: 2018-06-30 11:42:40
+(epstopdf)                    size: 16180 bytes
+(epstopdf)             Output file: <figures//XJTU_name-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-06-30 11:48:42
+(epstopdf)                    size: 6743 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures//XJTU_name-eps-con
+verted-to.pdf figures//XJTU_name.eps>
+(epstopdf)             \includegraphics on input line 6.
+Package epstopdf Info: Output file is already uptodate.
+<figures//XJTU_name-eps-converted-to.pdf, id=1, 2033.5975pt x 515.9275pt>
+File: figures//XJTU_name-eps-converted-to.pdf Graphic file (type pdf)
+<use figures//XJTU_name-eps-converted-to.pdf>
+Package pdftex.def Info: figures//XJTU_name-eps-converted-to.pdf  used on input
+ line 6.
+(pdftex.def)             Requested size: 224.77661pt x 57.01985pt.
+LaTeX Font Info:    Try loading font information for C70+zhfs on input line 6.
+ (e:/Program Files/TexLive2018/texmf-dist/tex/latex/zhmetrics/c70zhfs.fd
+File: c70zhfs.fd 2009/09/23 4.8.2
+)
+Package CJKpunct Info: use punctuation spaces for family 'zhfs' with punctstyle
+ (quanjiao) on input line 6.
+
+[1
+
+ <./figures//XJTU_name-eps-converted-to.pdf>] (./test.aux) ) 
 Here is how much of TeX's memory you used:
- 11971 strings out of 494534
- 240605 string characters out of 6175157
- 257778 words of memory out of 5000000
- 15483 multiletter control sequences out of 15000+600000
- 535914 words of font info for 43 fonts, out of 8000000 for 9000
+ 13811 strings out of 494534
+ 267283 string characters out of 6175157
+ 297029 words of memory out of 5000000
+ 17254 multiletter control sequences out of 15000+600000
+ 533233 words of font info for 33 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 47i,4n,48p,10411b,359s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/W
-indows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.t
-tc><c:/Windows/Fonts/simsun.ttc
-
-pdfTeX warning: pdflatex.exe (file c:/Windows/Fonts/simsun.ttc): subfont gbkson
-g25: wrong mapping: character 154 --> 0xFFFE --> .notdef
-><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/si
-msun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/
-Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/
-Windows/Fonts/simsun.ttc
-
-pdfTeX warning: pdflatex.exe (file c:/Windows/Fonts/simsun.ttc): subfont gbkson
-g34: wrong mapping: character 13 --> 0xFFFE --> .notdef
-
-
-pdfTeX warning: pdflatex.exe (file c:/Windows/Fonts/simsun.ttc): subfont gbkson
-g34: wrong mapping: character 76 --> 0xFFFE --> .notdef
-><c:/Windows/Fonts/simsun.ttc>
-Output written on test.pdf (1 page, 92589 bytes).
+ 47i,6n,48p,10436b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/Windows/Fonts/s
+imfang.ttf><c:/Windows/Fonts/simfang.ttf><c:/Windows/Fonts/simfang.ttf><c:/Wind
+ows/Fonts/simfang.ttf><c:/Windows/Fonts/simfang.ttf><e:/Program Files/TexLive20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on test.pdf (1 page, 26264 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 41 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

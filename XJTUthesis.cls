@@ -1,16 +1,21 @@
 % A Temlapte for XJTU
 % Based on article
 \ProvidesClass{XJTUthesis}
-\LoadClass[UTF8]{article}
+\LoadClass[UTF8,12pt]{article}
 \RequirePackage{ctex}
+\RequirePackage{geometry}
+\RequirePackage{graphicx}
+\RequirePackage{color}
+
+\CJKfamily{zhfs}
+\geometry{a4paper,top=3.0cm,bottom=2.5cm,left=2.6cm,right=2.6cm}
 
 \newcommand{\firstpage}{%
-    \clearpage
-    \thispagestyle{empty}
-    \vspace*{50pt}
+    \newpage
+    \begin{figure}
+      \centering
+      \includegraphics[width=0.5\textwidth]{figures//XJTU_name.eps}
+    \end{figure}
 
-    \begin{center}
-        \bf\songti\zihao{-1}中国科学院研究生院\\博士学位论文
-        \vskip 50pt
-    \end{center}
+    \centering \color{red} \fontsize{36pt}{\baselineskip} \fangsong \textbf{毕业设计（论文）}
 }
