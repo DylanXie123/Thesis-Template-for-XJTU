@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.5.19)  30 JUN 2018 13:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.5.19)  30 JUN 2018 15:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,6 +683,9 @@ Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
+)
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
 ))
 (e:/Program Files/TexLive2018/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
 File: UTF8.bdg 2015/04/18 4.8.4
@@ -883,40 +886,70 @@ Package epstopdf Info: Source file: <figures//XJTU_name.eps>
 (epstopdf)                    size: 6743 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures//XJTU_name-eps-con
 verted-to.pdf figures//XJTU_name.eps>
-(epstopdf)             \includegraphics on input line 6.
+(epstopdf)             \includegraphics on input line 7.
 Package epstopdf Info: Output file is already uptodate.
 <figures//XJTU_name-eps-converted-to.pdf, id=1, 2033.5975pt x 515.9275pt>
 File: figures//XJTU_name-eps-converted-to.pdf Graphic file (type pdf)
 <use figures//XJTU_name-eps-converted-to.pdf>
 Package pdftex.def Info: figures//XJTU_name-eps-converted-to.pdf  used on input
- line 6.
-(pdftex.def)             Requested size: 224.77661pt x 57.01985pt.
-LaTeX Font Info:    Try loading font information for C70+zhfs on input line 6.
+ line 7.
+(pdftex.def)             Requested size: 179.81854pt x 45.6206pt.
+LaTeX Font Info:    Try loading font information for C70+zhfs on input line 7.
  (e:/Program Files/TexLive2018/texmf-dist/tex/latex/zhmetrics/c70zhfs.fd
 File: c70zhfs.fd 2009/09/23 4.8.2
 )
 Package CJKpunct Info: use punctuation spaces for family 'zhfs' with punctstyle
- (quanjiao) on input line 6.
+ (quanjiao) on input line 7.
+LaTeX Font Info:    Calculating math sizes for size <15.75> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <15.75> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <11.02495> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.875> on input line 7.
+LaTeX Font Info:    Try loading font information for C70+zhsong on input line 7
+.
+
+(e:/Program Files/TexLive2018/texmf-dist/tex/latex/zhmetrics/c70zhsong.fd
+File: c70zhsong.fd 2009/09/23 4.8.2
+)
+Package CJKpunct Info: use punctuation spaces for family 'zhsong' with punctsty
+le (quanjiao) on input line 7.
 
 [1
 
  <./figures//XJTU_name-eps-converted-to.pdf>] (./test.aux) ) 
 Here is how much of TeX's memory you used:
- 13811 strings out of 494534
- 267283 string characters out of 6175157
- 297029 words of memory out of 5000000
- 17254 multiletter control sequences out of 15000+600000
- 533233 words of font info for 33 fonts, out of 8000000 for 9000
+ 14281 strings out of 494534
+ 277168 string characters out of 6175157
+ 300683 words of memory out of 5000000
+ 17643 multiletter control sequences out of 15000+600000
+ 545976 words of font info for 79 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 47i,6n,48p,10436b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,10n,48p,10436b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/Windows/Fonts/s
-imfang.ttf><c:/Windows/Fonts/simfang.ttf><c:/Windows/Fonts/simfang.ttf><c:/Wind
-ows/Fonts/simfang.ttf><c:/Windows/Fonts/simfang.ttf><e:/Program Files/TexLive20
-18/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on test.pdf (1 page, 26264 bytes).
+imsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows
+/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:
+/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun
+.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Font
+s/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wind
+ows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>
+<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sim
+sun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/F
+onts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/W
+indows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.t
+tc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/
+simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Window
+s/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c
+:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simfang.ttf><c:/Windows/Fonts/simf
+ang.ttf><c:/Windows/Fonts/simfang.ttf><c:/Windows/Fonts/simfang.ttf><c:/Windows
+/Fonts/simfang.ttf><e:/Program Files/TexLive2018/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb><e:/Program Files/TexLive2018/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb>
+Output written on test.pdf (1 page, 201173 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 227 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 
