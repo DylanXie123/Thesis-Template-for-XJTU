@@ -1,5 +1,3 @@
 # Template-for-XJTU
-first day with github
-learning git with liao
-hello world
-add LICENSE with HELLO WORLD
+This is a Template-for-XJTU
+Welocme to use it
