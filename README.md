@@ -5,4 +5,4 @@
 * Issue:the title of "\firstpage" must be divided into two parts
 
 Contact me:
-[E-Mail](dylanxie123@126.com)
+<a href="mailto:dylanxie123@outlook.com">E-Mail</a>
