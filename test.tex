@@ -1,16 +1,25 @@
-\documentclass[UTF8]{XJTUthesis}
+\documentclass[UTF8,bachelor]{XJTUthesis}
 
 \begin{document}
 
-\firstpage{智能医疗机器人云存储技术研究及交互系统设计}{}{钱学森学院}{机械自动化}{机械钱31}{靳宇栋}{2161700000}{许睦旬}{西安交通大学}
+\firstpage{智能医疗机器人云存储技术研究及}{交互系统设计}{钱学森学院}{机械自动化}{机械钱31}{靳宇栋}{2161700000}{许睦旬}{西安交通大学}
 
 \tableofcontents
-\clearpage
+\thispagestyle{empty}
+\setcounter{page}{0}
+\newpage
 
 \begin{abstract}
 医疗资源紧张和医疗服务滞后是当今医疗领域的突出问题，医疗机器人可以打破传统医疗服务的时间和空间限制，缓解医护人员的繁忙机械劳动。论文在一种新型服务机器人基础上，规划了全面的机器人内容服务体系，对以机器人为媒介的远程医疗模式进行了研究。首先，基于Android平台开发了智能医疗机器人交互系统：通过蓝牙BLE实现了体征数据无线采集，基于HelloChart实现了体征数据折线图的动态绘制。应用云技术实现了康复进度反馈、智能医嘱和远程随访功能、云端药品信息库的远程管理。基于SDK搭建了用户管理系统，增强了产品化的用户体验。其次，实现了机器人底层功能与内容服务的对接：应用WebSocket技术搭建了交互系统与主控系统之间的通讯系统，并基于JSON制定了两系统之间的数据传输协议。最后，基于Bmob搭建了其云存储平台：实现了结构化和非结构化数据的云端统一管理，实现了云端和本地的数据实时同步。通过样机调试，整套智能医疗机器人交互系统功能丰富、界面美观、操作友好，其云存储平台管理有序、运行稳定，对新型智能医疗机器人产品的最终开发定型起到支撑作用，具有较高的应用价值。
 \end{abstract}
 \keywords{医疗服务；智能医疗机器人；云存储技术；交互系统设计}
+\newpage
+\begin{eabstract}
+Times New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New Roman\par
+Times New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New Roman\par
+Times New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New RomanTimes New Roman\par
+\end{eabstract}
+\ekeywords{Good;Doo}
 
 \section{绪论}
 随着人口老龄化和生活质量不断提高，人们对医疗服务的数量和质量都提出了更高的要求。如今，基于机器人技术、云存储技术的远程医疗服务模式的研究工作愈加深入，但具体到远程医疗机器人的研究应用，还没有上升到产品化的高度。本智能医疗机器人主要面向患者术后康复治疗、慢性病患者、护理院三个应用场景，旨在实现对医疗优势智力资源的共享，创建以机器人为媒介的新型医疗服务模式，论文主要开展以下工作：\par

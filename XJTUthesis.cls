@@ -1,8 +1,16 @@
 % A Temlapte for XJTU
 % Based on book
+\NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{XJTUthesis}
-\LoadClass[UTF8,12pt]{ctexbook}
-%\RequirePackage{ctex}
+\LoadClass[UTF8]{ctexbook}
+
+%% Option provided
+\DeclareOption{bachelor}{\relax}
+\DeclareOption{master}{\relax}
+\DeclareOption{doctor}{\relax}
+\ProcessOptions\relax
+
+%% Package needed
 \RequirePackage{geometry}
 \RequirePackage{graphicx}
 \RequirePackage{color}
@@ -13,19 +21,74 @@
 \RequirePackage{booktabs} %三线表
 \RequirePackage{makecell}
 \RequirePackage{amsmath}
+\RequirePackage{times}
+\RequirePackage{indentfirst}
 
-\CJKfamily{zhkai}
+
+%% margin setting
 \geometry{a4paper,top=3.0cm,bottom=2.5cm,left=2.6cm,right=2.6cm}
-\ctexset {
-    chapter/numbering = false,
-    section/number = \arabic{section},
-    subsection/number = \arabic{section}.\arabic{subsection},
-    subsubsection/number = \arabic{section}.\arabic{subsection}.\arabic{subsubsection},
-}
+\setlength{\headsep}{1cm}
+\setlength{\footskip}{0.75cm}
+
+%% head and foot
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[CE]{\songti \wuhao {西安交通大学本科毕业设计(论文)}}
+\fancyhead[CO]{\songti \fontsize{10.5pt}{\baselineskip} {\ifnum \value{page}=1 摘要 \else{\rightmark} \fi}}
+\fancyfoot{}
+\fancyfoot[RO,LE]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+% double line head
+\newcommand{\makeheadrule}{%
+\makebox[0pt][l]{\rule[0.5\baselineskip]{\headwidth}{0.5pt}}%
+\rule[0.7\baselineskip]{\headwidth}{0.5pt}}
+\renewcommand{\headrule}{%
+{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+\makeheadrule}}
+
+%% initial section setting
+\linespread{1.2}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+%% content setting
+\renewcommand{\contentsname}{\bfseries\sanhao{目\qquad录}}
+\titlecontents{section}[0em]{}{\contentslabel{1em}}{}{\titlerule*[0.5pc]{$\cdot$}\contentspage}%
+\titlecontents{subsection}[2em]{}{\contentslabel{2em}}{}{\titlerule*[0.5pc]{$\cdot$}\contentspage}%
+\titlecontents{subsubsection}[4em]{}{\contentslabel{3em}}{}{\titlerule*[0.5pc]{$\cdot$}\contentspage}%
+
+%% modify the sytle of chapter and section
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\titleformat{\section}[block]{\centering\bfseries\sanhao}{\newpage \thesection}{2em}{\setcounter{table}{0}}
+\titleformat{\subsection}[block]{\bfseries\xiaosanhao}{\thesubsection}{0.5em}{\setcounter{figure}{0}}
+\titleformat{\subsubsection}[block]{\large\bfseries}{\qquad \thesubsubsection}{0em}{}
+
+%% abstract && keywords
+\newenvironment{abstract}{
+	\begin{center}\songti\sanhao{摘\qquad要} \\ \end{center}
+	\par
+    \xiaosihao
+}{\\}
+
+\newcommand{\keywords}[1]{\\ \wuhao \textbf{关键词：} \wuhao #1}
+% english version
+\newenvironment{eabstract}{
+	\begin{center}\songti\sanhao{ABSTRACT} \\ \end{center}
+	\par
+    \xiaosihao
+    \setlength{\parskip}{0.5\baselineskip}
+    \setlength{\parindent}{0em}
+    \noindent
+}{}
+
+\newcommand{\ekeywords}[1]{\wuhao \textbf{KEY WORDS:} \wuhao #1}
 
 %% change the code of picture and table
-\renewcommand {\thetable} {\arabic{section}-\arabic{table}}
-\renewcommand {\thefigure} {\arabic{section}-\arabic{figure}}
+\renewcommand {\thetable} {\thesection-\arabic{table}}
+\renewcommand {\thefigure} {\thesection-\arabic{figure}}
 
 %% \firstpage
 \newcommand\dlmu[2]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
@@ -38,16 +101,15 @@
         \end{figure}
 
         \begin{center}
-            \color{red} \fangsong{\xiaochuhao{\textbf{毕业设计（论文）}}}
+            {\color{red} \fangsong \xiaochuhao \textbf{毕业设计（论文）}}
             \vskip 1.8cm
 
-            \color{black} \songti
             \begin{spacing}{2}
-                \sanhao
+                \sanhao \songti
                 \textbf{
                     \begin{tabular}{ll}
-                      题 \quad 目 & \underline{#1} \\
-                       & \underline{#2} \\
+                      题 \quad 目 & \dlmu{11cm}{#1} \\
+                       & \dlmu{11cm}{#2} \\
                     \end{tabular}
                     \vskip 1.5cm
                     \dlmu{3cm}{#3} 学院  \dlmu{3cm}{#4} 系（专业） \dlmu{3cm}{#5} 班\\
@@ -61,41 +123,7 @@
             \setcounter{page}{0}
         \end{center}
     \end{titlepage}
-    \linespread{1.2}
 }
-
-%% head and foot
-\pagestyle{fancy}
-\fancyhead{}
-\fancyhead[CE]{\songti \fontsize{10.5pt}{\baselineskip}{西安交通大学本科毕业设计(论文)}}
-\fancyhead[CO]{\songti \fontsize{10.5pt}{\baselineskip}{\leftmark}}
-\fancyfoot{}
-\fancyfoot[RO,LE]{\thepage}
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0.5pt}
-
-%% modify the sytle of chapter and section
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
-\titleformat{\section}[block]{\centering\bfseries\sanhao}{\clearpage \arabic{section}}{2em}{\setcounter{table}{0}}
-\titleformat{\subsection}[block]{\bfseries\xiaosanhao}{\arabic{section}.\arabic{subsection}}{0.5em}{\setcounter{figure}{0}}
-\titleformat{\subsubsection}[block]{\large\bfseries}{\quad \arabic{section}.\arabic{subsection}.\arabic{subsubsection}}{0em}{}
-
-%% abstract && keywords
-\newenvironment{abstract}{
-	\begin{center}\songti\sanhao{摘\qquad要} \\ \end{center}
-	\par
-    \xiaosihao
-}
-{\\}
-
-\newcommand{\keywords}[1]{\wuhao \textbf{关键词：} \wuhao #1}
-
-%% change content
-\renewcommand{\contentsname}{\bfseries\sanhao{目\qquad录}}
-\titlecontents{section}[0em]{}{\contentslabel{1em}}{}{\titlerule*[0.5pc]{$\cdot$}\contentspage}%
-\titlecontents{subsection}[2em]{}{\contentslabel{2em}}{}{\titlerule*[0.5pc]{$\cdot$}\contentspage}%
-\titlecontents{subsubsection}[4em]{}{\contentslabel{3em}}{}{\titlerule*[0.5pc]{$\cdot$}\contentspage}%
 
 %% fontsize
 \newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
