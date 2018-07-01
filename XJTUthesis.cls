@@ -10,6 +10,9 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{titlesec}
 \RequirePackage{titletoc}
+\RequirePackage{booktabs} %三线表
+\RequirePackage{makecell}
+\RequirePackage{amsmath}
 
 \CJKfamily{zhkai}
 \geometry{a4paper,top=3.0cm,bottom=2.5cm,left=2.6cm,right=2.6cm}
@@ -19,6 +22,10 @@
     subsection/number = \arabic{section}.\arabic{subsection},
     subsubsection/number = \arabic{section}.\arabic{subsection}.\arabic{subsubsection},
 }
+
+%% change the code of picture and table
+\renewcommand {\thetable} {\arabic{section}-\arabic{table}}
+\renewcommand {\thefigure} {\arabic{section}-\arabic{figure}}
 
 %% \firstpage
 \newcommand\dlmu[2]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
@@ -32,13 +39,13 @@
 
         \begin{center}
             \color{red} \fangsong{\xiaochuhao{\textbf{毕业设计（论文）}}}
-            \vskip 1.5cm
+            \vskip 1.8cm
 
             \color{black} \songti
             \begin{spacing}{2}
                 \sanhao
                 \textbf{
-                    \begin{tabular}{cc}
+                    \begin{tabular}{ll}
                       题 \quad 目 & \underline{#1} \\
                        & \underline{#2} \\
                     \end{tabular}
@@ -54,6 +61,7 @@
             \setcounter{page}{0}
         \end{center}
     \end{titlepage}
+    \linespread{1.2}
 }
 
 %% head and foot
@@ -69,8 +77,8 @@
 %% modify the sytle of chapter and section
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-\titleformat{\section}[block]{\centering\bfseries\sanhao}{\clearpage \arabic{section}}{2em}{}
-\titleformat{\subsection}[block]{\bfseries\xiaosanhao}{\arabic{section}.\arabic{subsection}}{0.5em}{}
+\titleformat{\section}[block]{\centering\bfseries\sanhao}{\clearpage \arabic{section}}{2em}{\setcounter{table}{0}}
+\titleformat{\subsection}[block]{\bfseries\xiaosanhao}{\arabic{section}.\arabic{subsection}}{0.5em}{\setcounter{figure}{0}}
 \titleformat{\subsubsection}[block]{\large\bfseries}{\quad \arabic{section}.\arabic{subsection}.\arabic{subsubsection}}{0em}{}
 
 %% abstract && keywords
