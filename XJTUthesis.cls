@@ -2,7 +2,7 @@
 % Based on book
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{XJTUthesis}
-\LoadClass[UTF8]{ctexbook}
+\LoadClass[UTF8,openany, linespread=1.2]{ctexbook}
 
 %% Option provided
 \DeclareOption{bachelor}{\relax}
@@ -23,18 +23,85 @@
 \RequirePackage{amsmath}
 \RequirePackage{times}
 \RequirePackage{indentfirst}
+\RequirePackage[titles]{tocloft}
 
+\newif\ifxjtu@bachelor
+\newif\ifxjtu@master
+\newif\ifxjtu@doctor
+\newcommand{\degree}{}
+
+\DeclareOption{bachelor}{\xjtu@bachelortrue}
+\DeclareOption{master}{\xjtu@mastertrue}
+\DeclareOption{doctor}{\xjtu@doctortrue}
+\ProcessOptions\relax
+
+\ifxjtu@bachelor
+    \renewcommand{\degree}{本科}
+\fi
+
+\PassOptionsToPackage{no-math}{fontspec}
+
+\ctexset{
+    contentsname     = {\zihao{3} 目\qquad录},
+    chapter={
+        pagestyle    = fancy,
+        format       = \zihao{3}\bfseries\centering,
+        number       = \thechapter,
+        name         = {},
+        aftername    = \quad,
+        afterindent  = true,
+        beforeskip   = {3ex}, %default 50pt
+        afterskip    = {2ex},
+    },
+    section={
+        format       = \zihao{-3}\bfseries\centering,
+        number       = \thesection,
+        name         = {},
+        aftername    = \quad,
+        afterindent  = true,
+        beforeskip   = {1ex},
+        afterskip    = {0.5ex},
+    },
+    subsection={
+        format       = \zihao{4}\bfseries\centering,
+        number       = \thesubsection,
+        name         = {},
+        aftername    = \quad,
+        afterindent  = true,
+        beforeskip   = {0.5ex},
+        afterskip    = {0ex},
+    },
+}
+
+%% fill dot with content
+\renewcommand{\cftdot}{$\cdot$}
+\renewcommand{\cftdotsep}{1.5}
+\setlength{\cftbeforechapskip}{10pt}
+
+\renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+\makeatletter
+\renewcommand{\numberline}[1]{%
+\settowidth\@tempdimb{#1\hspace{0.5em}}%
+\ifdim\@tempdima<\@tempdimb%
+  \@tempdima=\@tempdimb%
+\fi%
+\hb@xt@\@tempdima{\@cftbsnum #1\@cftasnum\hfil}\@cftasnumb}
 
 %% margin setting
 \geometry{a4paper,top=3.0cm,bottom=2.5cm,left=2.6cm,right=2.6cm}
 \setlength{\headsep}{1cm}
 \setlength{\footskip}{0.75cm}
 
+%% change the code of picture and table
+\renewcommand {\thetable} {\thechapter-\arabic{table}}
+\renewcommand {\thefigure} {\thechapter-\arabic{figure}}
+
 %% head and foot
 \pagestyle{fancy}
 \fancyhead{}
-\fancyhead[CE]{\songti \wuhao {西安交通大学本科毕业设计(论文)}}
-\fancyhead[CO]{\songti \fontsize{10.5pt}{\baselineskip} {\ifnum \value{page}=1 摘要 \else{\rightmark} \fi}}
+\fancyhead[CE]{\songti \zihao{5} {西安交通大学毕业设计(论文)}}
+\fancyhead[CO]{\songti \zihao{5} {\ifnum \value{page}=1 摘要 \else{\leftmark} \fi}}
 \fancyfoot{}
 \fancyfoot[RO,LE]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
@@ -47,48 +114,24 @@
 {\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
 \makeheadrule}}
 
-%% initial section setting
-\linespread{1.2}
-\renewcommand{\thesection}{\arabic{section}}
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
-\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
-
-%% content setting
-\renewcommand{\contentsname}{\bfseries\sanhao{目\qquad录}}
-\titlecontents{section}[0em]{}{\contentslabel{1em}}{}{\titlerule*[0.5pc]{$\cdot$}\contentspage}%
-\titlecontents{subsection}[2em]{}{\contentslabel{2em}}{}{\titlerule*[0.5pc]{$\cdot$}\contentspage}%
-\titlecontents{subsubsection}[4em]{}{\contentslabel{3em}}{}{\titlerule*[0.5pc]{$\cdot$}\contentspage}%
-
-%% modify the sytle of chapter and section
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
-\titleformat{\section}[block]{\centering\bfseries\sanhao}{\newpage \thesection}{2em}{\setcounter{table}{0}}
-\titleformat{\subsection}[block]{\bfseries\xiaosanhao}{\thesubsection}{0.5em}{\setcounter{figure}{0}}
-\titleformat{\subsubsection}[block]{\large\bfseries}{\qquad \thesubsubsection}{0em}{}
-
 %% abstract && keywords
 \newenvironment{abstract}{
 	\begin{center}\songti\sanhao{摘\qquad要} \\ \end{center}
 	\par
-    \xiaosihao
+    \zihao{-4}
 }{\\}
 
-\newcommand{\keywords}[1]{\\ \wuhao \textbf{关键词：} \wuhao #1}
+\newcommand{\keywords}[1]{\\ \zihao{5} \textbf{关键词：} \wuhao #1}
 % english version
 \newenvironment{eabstract}{
 	\begin{center}\songti\sanhao{ABSTRACT} \\ \end{center}
 	\par
-    \xiaosihao
+    \zihao{-4}
     \setlength{\parskip}{0.5\baselineskip}
     \setlength{\parindent}{0em}
-    \noindent
-}{}
+}{\\}
 
-\newcommand{\ekeywords}[1]{\wuhao \textbf{KEY WORDS:} \wuhao #1}
-
-%% change the code of picture and table
-\renewcommand {\thetable} {\thesection-\arabic{table}}
-\renewcommand {\thefigure} {\thesection-\arabic{figure}}
+\newcommand{\ekeywords}[1]{ \noindent \wuhao \textbf{KEY WORDS:} \wuhao #1}
 
 %% \firstpage
 \newcommand\dlmu[2]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
@@ -97,29 +140,31 @@
     \begin{titlepage}
         \begin{figure}
           \centering
-          \includegraphics[width=0.4\textwidth]{figures//XJTU_name.eps}
+          \includegraphics[width=0.4\textwidth]{figures//a2_1zwxm.png}
         \end{figure}
 
         \begin{center}
-            {\color{red} \fangsong \xiaochuhao \textbf{毕业设计（论文）}}
-            \vskip 1.8cm
+            {\color{red} \fangsong \zihao{-0} \textbf{毕业设计（论文）}}
+            \vskip 15ex
 
-            \begin{spacing}{2}
-                \sanhao \songti
-                \textbf{
-                    \begin{tabular}{ll}
-                      题 \quad 目 & \dlmu{11cm}{#1} \\
-                       & \dlmu{11cm}{#2} \\
-                    \end{tabular}
-                    \vskip 1.5cm
-                    \dlmu{3cm}{#3} 学院  \dlmu{3cm}{#4} 系（专业） \dlmu{3cm}{#5} 班\\
-                    学生姓名 \dlmu{12cm}{#6}\\
-                    学 \quad 号 \dlmu{12cm}{#7}\\
-                    指导教师 \dlmu{12cm}{#8}\\
-                    设计所在单位 \dlmu{12cm}{#9}\\
-                    \number\year年\number\month月\\
-                }
-            \end{spacing}
+            \zihao{3} \songti \bfseries
+            \begin{tabular}{ll}
+              题 \quad 目 & \dlmu{11cm}{#1} \\
+               & \dlmu{11cm}{#2} \\
+            \end{tabular}
+            \vskip 15ex
+
+            \dlmu{3cm}{#3} 学院  \dlmu{4.5cm}{#4} 系（专业） \dlmu{3cm}{#5} 班\\
+            \renewcommand\arraystretch{2.5}
+            \begin{tabular}{cc}
+              学生姓名 & \dlmu{12cm}{#6} \\
+              学\qquad号 & \dlmu{12cm}{#7} \\
+              指导教师 & \dlmu{12cm}{#8} \\
+              设计所在单位 & \dlmu{12cm}{#9} \\
+            \end{tabular}
+            \vskip 5ex
+            \number\year年\number\month月\\
+
             \setcounter{page}{0}
         \end{center}
     \end{titlepage}
