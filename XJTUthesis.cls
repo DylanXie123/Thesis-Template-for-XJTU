@@ -11,6 +11,7 @@
 \ProcessOptions\relax
 
 %% Package needed
+\RequirePackage{lmodern} %arbitry font size
 \RequirePackage{geometry}
 \RequirePackage{graphicx}
 \RequirePackage{color}
@@ -24,11 +25,18 @@
 \RequirePackage{times}
 \RequirePackage{indentfirst}
 \RequirePackage[titles]{tocloft}
+\RequirePackage{algorithmic}
+\RequirePackage{algorithm}
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+%\RequirePackage[backend=biber,bibstyle=gb7714-2015,citestyle=gb7714-2015,backref=true,seconds=true]{biblatex}
+\RequirePackage[bookmarks=true,colorlinks,linkcolor=black]{hyperref}
 
 \newif\ifxjtu@bachelor
 \newif\ifxjtu@master
 \newif\ifxjtu@doctor
 \newcommand{\degree}{}
+\newcounter{theappendix}
 
 \DeclareOption{bachelor}{\xjtu@bachelortrue}
 \DeclareOption{master}{\xjtu@mastertrue}
@@ -43,6 +51,7 @@
 
 \ctexset{
     contentsname     = {\zihao{3} 目\qquad录},
+    bibname          = {\zihao{3} 参考文献},
     chapter={
         pagestyle    = fancy,
         format       = \zihao{3}\bfseries\centering,
@@ -116,22 +125,22 @@
 
 %% abstract && keywords
 \newenvironment{abstract}{
-	\begin{center}\songti\sanhao{摘\qquad要} \\ \end{center}
+	\begin{center}\songti\zihao{3}{摘\qquad要} \\ \end{center}
 	\par
     \zihao{-4}
 }{\\}
 
-\newcommand{\keywords}[1]{\\ \zihao{5} \textbf{关键词：} \wuhao #1}
+\newcommand{\keywords}[1]{\\ \zihao{5} \textbf{关键词：} \zihao{5} #1}
 % english version
 \newenvironment{eabstract}{
-	\begin{center}\songti\sanhao{ABSTRACT} \\ \end{center}
+	\begin{center}\songti\zihao{3}{ABSTRACT} \\ \end{center}
 	\par
     \zihao{-4}
     \setlength{\parskip}{0.5\baselineskip}
     \setlength{\parindent}{0em}
 }{\\}
 
-\newcommand{\ekeywords}[1]{ \noindent \wuhao \textbf{KEY WORDS:} \wuhao #1}
+\newcommand{\ekeywords}[1]{ \noindent \zihao{5} \textbf{KEY WORDS:} \zihao{5} #1}
 
 %% \firstpage
 \newcommand\dlmu[2]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
@@ -149,18 +158,18 @@
 
             \zihao{3} \songti \bfseries
             \begin{tabular}{ll}
-              题 \quad 目 & \dlmu{11cm}{#1} \\
-               & \dlmu{11cm}{#2} \\
+              题 \quad 目 & \dlmu{10cm}{#1} \\
+               & \dlmu{10cm}{#2} \\
             \end{tabular}
             \vskip 15ex
 
-            \dlmu{3cm}{#3} 学院  \dlmu{4.5cm}{#4} 系（专业） \dlmu{3cm}{#5} 班\\
+            \dlmu{3cm}{#3} 学院  \dlmu{3cm}{#4} 系（专业） \dlmu{3cm}{#5} 班\\
             \renewcommand\arraystretch{2.5}
             \begin{tabular}{cc}
-              学生姓名 & \dlmu{12cm}{#6} \\
-              学\qquad号 & \dlmu{12cm}{#7} \\
-              指导教师 & \dlmu{12cm}{#8} \\
-              设计所在单位 & \dlmu{12cm}{#9} \\
+              学生姓名 & \dlmu{10cm}{#6} \\
+              学\qquad号 & \dlmu{10cm}{#7} \\
+              指导教师 & \dlmu{10cm}{#8} \\
+              设计所在单位 & \dlmu{10cm}{#9} \\
             \end{tabular}
             \vskip 5ex
             \number\year年\number\month月\\
@@ -170,20 +179,30 @@
     \end{titlepage}
 }
 
-%% fontsize
-\newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
-\newcommand{\xiaochuhao}{\fontsize{36pt}{\baselineskip}\selectfont}
-\newcommand{\yihao}{\fontsize{26pt}{\baselineskip}\selectfont}
-\newcommand{\xiaoyihao}{\fontsize{24pt}{\baselineskip}\selectfont}
-\newcommand{\erhao}{\fontsize{22pt}{\baselineskip}\selectfont}
-\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
-\newcommand{\sanhao}{\fontsize{16pt}{\baselineskip}\selectfont}
-\newcommand{\xiaosanhao}{\fontsize{15pt}{\baselineskip}\selectfont}
-\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
-\newcommand{\xiaosihao}{\fontsize{12pt}{\baselineskip}\selectfont}
-\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
-\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}
-\newcommand{\liuhao}{\fontsize{7.5pt}{\baselineskip}\selectfont}
-\newcommand{\xiaoliuhao}{\fontsize{6.5pt}{\baselineskip}\selectfont}
-\newcommand{\qihao}{\fontsize{5.5pt}{\baselineskip}\selectfont}
-\newcommand{\bahao}{\fontsize{5pt}{\baselineskip}\selectfont}
+\lstset{
+    numbers=left,
+    numberstyle= \tiny,
+    keywordstyle= \color{ blue!70},
+    commentstyle= \color{red!50!green!50!blue!50},
+    frame=shadowbox, % 阴影效果
+    rulesepcolor= \color{ red!20!green!20!blue!20} ,
+    escapeinside=``, % 英文分号中可写入中文
+    xleftmargin=2em,xrightmargin=2em, aboveskip=1em,
+    framexleftmargin=2em
+}
+
+%% reference setting
+%\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
+
+%% appendix enviroment
+\newenvironment{appendixs}{
+    \addtocounter{theappendix}{1}
+    \chapter*{附录\arabic{theappendix}}
+    \addcontentsline{toc}{chapter}{附录\arabic{theappendix}}
+}{}
+
+%% acknowledgement enviroment
+\newenvironment{acknowledgement}{
+    \chapter*{致\quad谢}
+    \addcontentsline{toc}{chapter}{致谢}
+}{}

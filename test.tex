@@ -1,5 +1,7 @@
 \documentclass[bachelor]{XJTUthesis}
 
+%\addbibresource[location=local]{reference//example.bib}
+
 \begin{document}
 
 \firstpage{西安交通大学}{\LaTeX 毕业设计模板}{电气学院}{电气工程}{电气613}{谢晋安}{0000000000}{谢晋安}{西安交通大学}
@@ -20,52 +22,36 @@ This is a template.
 \ekeywords{\LaTeX;XJTU}
 
 \chapter{图表}
-图\ref{xiaohui:ref}和\ref{xiaohui:blue}是交大的校徽。
+图\ref{xiaohui:red}和\ref{xiaohui:blue}是交大的校徽。
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.3\textwidth]{figures//a3_1jdxhred.png}
   \caption{校徽}\label{xiaohui:red}
 \end{figure}
 
-图\ref{xiaohui}是交大的校徽。
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.3\textwidth]{figures//a3_2jdxhblue.png}
   \caption{校徽}\label{xiaohui:blue}
 \end{figure}
 
-图\ref{xiaobiao}是交大的校标
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=1\textwidth]{figures//a4_2xbred.png}
-  \caption{校标}\label{xiaobiao}
-\end{figure}
-
-图\ref{xiaoxun}是交大的校训
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.5\textwidth]{figures//a5_2xxys2.png}
-  \caption{校训}\label{xiaoxun}
-\end{figure}
-
 表\ref{fuhao}是符号说明
 \begin{table}[htbp]
-  \centering
-\begin{tabular}{|c|c|}
-  \hline
-  
-  \makecell{符号}&\makecell{说明}\\ %makecell用于生成表头
-  \hline
-  $a_t$ & 参数在t时刻的值 \\
-  \hline
-  $\rho$ & 相关系数 \\
-  \hline
-  $\boldsymbol{\omega}$ & 超平面方向向量 \\
-  \hline
-  $b$ & 超平面偏置量 \\
-  \hline
-\end{tabular}
-  \caption{符号说明}\label{fuhao}
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \makecell{符号}&\makecell{说明}\\ %makecell用于生成表头
+        \hline
+        $a_t$ & 参数在t时刻的值 \\
+        \hline
+        $\rho$ & 相关系数 \\
+        \hline
+        $\boldsymbol{\omega}$ & 超平面方向向量 \\
+        \hline
+        $b$ & 超平面偏置量 \\
+        \hline
+    \end{tabular}
+    \caption{符号说明}\label{fuhao}
 \end{table}
 
 \chapter{图表2}
@@ -76,10 +62,82 @@ This is a template.
   \caption{校标}\label{xioabioa:shu}
 \end{figure}
 
+表\ref{tab:test}是常用的三线表
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{lcl}
+        \toprule
+        。。 & 。。 & 。。 \\
+        \midrule
+        。。 & 。。 & 。。 \\
+        。。 & 。。 & 。。 \\
+        。。 & 。。 & 。。 \\
+        \bottomrule
+    \end{tabular}
+    \caption{\label{tab:test}示例表格}
+\end{table}
+
 \chapter{TIKZ}
 
 \chapter{一些环境}
+algorithm环境
+\begin{algorithm}
+    \caption{Calculate $y = x^n$}
+    \label{alg1}
+    \begin{algorithmic}
+        \REQUIRE $n \geq 0 \vee x \neq 0$
+        \ENSURE $y = x^n$
+        \STATE $y \leftarrow 1$
+        \IF{$n < 0$}
+        \STATE $X \leftarrow 1 / x$
+        \STATE $N \leftarrow -n$
+        \ELSE
+        \STATE $X \leftarrow x$
+        \STATE $N \leftarrow n$
+        \ENDIF
+        \WHILE{$N \neq 0$}
+        \IF{$N$ is even}
+        \STATE $X \leftarrow X \times X$
+        \STATE $N \leftarrow N / 2$
+        \ELSE[$N$ is odd]
+        \STATE $y \leftarrow y \times X$
+        \STATE $N \leftarrow N - 1$
+        \ENDIF
+        \ENDWHILE
+    \end{algorithmic}
+\end{algorithm}
+
+lstlisting环境用于插入代码
+\begin{lstlisting}[language=c++]
+//hello.c
+#include<stdio.h>
+int main(void)
+{
+    int *p;
+    printf("hello");
+    return 0;
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=matlab]
+for i=1:100
+    display('hello');
+end
+\end{lstlisting}
 
 \chapter{杂项}
 
+\begin{appendixs}
+战斗风格十色入规范司法和v角色发v就是
+\end{appendixs}
+
+\begin{appendixs}
+战斗风格十色入规范司法和v角色发v就是
+\end{appendixs}
+
+\begin{acknowledgement}
+\chaptername
+\end{acknowledgement}
+
+%\printbibliography[title=参考文献]
 \end{document} 
