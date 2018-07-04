@@ -1,6 +1,6 @@
 \documentclass[bachelor]{XJTUthesis}
 
-%\addbibresource[location=local]{reference//example.bib}
+\addbibresource[location=local]{reference//example.bib}
 
 \begin{document}
 
@@ -32,6 +32,41 @@
 This is a template.
 \end{eabstract}
 \ekeywords{\LaTeX;XJTU}
+
+\chapter{前言}
+几个月前看见BBS上有人问有没有西交的 \LaTeX 毕设模板，貌似没人回应，本人不能说精通 \LaTeX ，但对 \LaTeX 也有一定的了解。自己从开源世界获益颇多，希望能凭借自己微薄之力汇报开源世界，经过小学期大概一周的开发，基本的框架已经搭好。\par
+本模板按照西安交大毕业设计（论文）实施细则中的规定进行编写，如果有不符合规范之处，望用户指出。
+
+\chapter{用户手册}
+本模板假设用户已经掌握基本的 \LaTeX 使用技巧，在手册中给出本模板的功能。
+\section{封面页}
+本模板提供指令$\backslash$cover 生成封面页，使用时需要先利用$\backslash$xuehao 等命令定义需要的参数。本文档生成的封面页的代码如下
+\begin{lstlisting}
+\titlenamea{西安交通大学}
+\titlenameb{\LaTeX 毕业设计模板}
+\xueyuan{电气学院}
+\zhuanye{电气工程}
+\banji{电气613}
+\name{谢晋安}
+\xuehao{0000000000}
+\teacher{\LaTeX \quad GitHub}
+\danwei{西安交通大学}
+\cover
+\end{lstlisting}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{figures//a2_1zwxm.png}
+  \caption{效果图}
+\end{figure}
+其中$\backslash$titlenamea和$\backslash$titlenameb分别为标题的两部分（BUG），其余分别为对应项
+
+\section{目录}
+\section{中英文摘要}
+\section{三级标题的使用}
+\section{致谢}
+\section{参考文献}
+\section{附录}
 
 \chapter{图表}
 \section{图}
@@ -160,5 +195,5 @@ asndlfa
 \chaptername
 \end{acknowledgement}
 
-%\printbibliography[title=参考文献]
+\printbibliography[heading=bibliography,title=参考文献]
 \end{document} 

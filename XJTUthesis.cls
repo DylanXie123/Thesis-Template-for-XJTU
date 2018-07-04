@@ -1,6 +1,6 @@
 % A Temlapte for XJTU
 % Based on book
-\NeedsTeXFormat{LaTeX2e}
+%\NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{XJTUthesis}
 \LoadClass[UTF8,openany, linespread=1.2]{ctexbook}
 
@@ -30,9 +30,10 @@
 \RequirePackage{listings}
 \RequirePackage{xcolor}
 \RequirePackage{pdfpages}
-%\RequirePackage[backend=biber,bibstyle=gb7714-2015,citestyle=gb7714-2015,backref=true,seconds=true]{biblatex}
-\RequirePackage[pdftex, bookmarksnumbered, bookmarksopen, colorlinks, linkcolor=black]{hyperref}
+\RequirePackage[backend=biber,bibstyle=gb7714-2015,citestyle=gb7714-2015]{biblatex}
+\RequirePackage[colorlinks=true,pdfstartview=FitH,linkcolor=black,anchorcolor=violet,citecolor=magenta]{hyperref}
 
+\makeatletter
 \newif\ifxjtu@bachelor
 \newif\ifxjtu@master
 \newif\ifxjtu@doctor
@@ -53,7 +54,7 @@
 \PassOptionsToPackage{no-math}{fontspec}
 
 \ctexset{
-    contentsname     = {\zihao{3} 目\qquad录},
+    contentsname     = {\zihao{3} 目 \qquad 录},
     bibname          = {\zihao{3} 参考文献},
     chapter={
         pagestyle    = fancy,
@@ -134,7 +135,7 @@
 
 %% abstract && keywords
 \newenvironment{abstract}{
-	\begin{center}\songti\zihao{3}{摘\qquad要} \\ \end{center}
+	\begin{center}\songti\zihao{3}{摘 \qquad 要} \\ \end{center}
 	\par
     \zihao{-4}
 }{\\}
@@ -171,7 +172,7 @@
 \newcommand{\@danwei}{}
 \newcommand{\danwei}[1]{\renewcommand{\@danwei}{#1}}
 
-\newcommand\dlmu[2]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
+\newcommand{\dlmu}[2]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
 
 \newcommand{\cover}{
     \begin{titlepage}
@@ -195,17 +196,18 @@
             \renewcommand\arraystretch{2.5}
             \begin{tabular}{cc}
               学生姓名 & \dlmu{10cm}{\@name} \\
-              学\qquad号 & \dlmu{10cm}{\@xuehao} \\
+              学 \qquad 号 & \dlmu{10cm}{\@xuehao} \\
               指导教师 & \dlmu{10cm}{\@teacher} \\
               设计所在单位 & \dlmu{10cm}{\@danwei} \\
             \end{tabular}
             \vskip 5ex
-            \number\year年\number\month月\\
+            \number \year 年 \number \month 月\\
 
             \setcounter{page}{0}
         \end{center}
     \end{titlepage}
 }
+
 
 \lstset{
     numbers=left,
@@ -231,7 +233,7 @@
 
 %% acknowledgement enviroment
 \newenvironment{acknowledgement}{
-    \chapter*{致\quad谢}
+    \chapter*{致 \quad 谢}
     \addtocounter{theacknowledgement}{1}
     \addcontentsline{toc}{chapter}{致谢}
 }{}
