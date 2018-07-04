@@ -17,26 +17,29 @@
 \RequirePackage{color}
 \RequirePackage{setspace}
 \RequirePackage{fancyhdr}
-\RequirePackage{titlesec}
-\RequirePackage{titletoc}
+%\RequirePackage{titlesec}
+%\RequirePackage{titletoc}
 \RequirePackage{booktabs} %三线表
 \RequirePackage{makecell}
 \RequirePackage{amsmath}
 \RequirePackage{times}
-\RequirePackage{indentfirst}
-\RequirePackage[titles]{tocloft}
+%\RequirePackage{indentfirst}
+\RequirePackage[titles]{tocloft} %required to generate content with dots
 \RequirePackage{algorithmic}
 \RequirePackage{algorithm}
 \RequirePackage{listings}
 \RequirePackage{xcolor}
+\RequirePackage{pdfpages}
 %\RequirePackage[backend=biber,bibstyle=gb7714-2015,citestyle=gb7714-2015,backref=true,seconds=true]{biblatex}
-\RequirePackage[bookmarks=true,colorlinks,linkcolor=black]{hyperref}
+\RequirePackage[pdftex, bookmarksnumbered, bookmarksopen, colorlinks, linkcolor=black]{hyperref}
 
 \newif\ifxjtu@bachelor
 \newif\ifxjtu@master
 \newif\ifxjtu@doctor
 \newcommand{\degree}{}
 \newcounter{theappendix}
+\setcounter{theappendix}{1}
+\newcounter{theacknowledgement}
 
 \DeclareOption{bachelor}{\xjtu@bachelortrue}
 \DeclareOption{master}{\xjtu@mastertrue}
@@ -54,7 +57,7 @@
     bibname          = {\zihao{3} 参考文献},
     chapter={
         pagestyle    = fancy,
-        format       = \zihao{3}\bfseries\centering,
+        format       = \zihao{3}\centering,
         number       = \thechapter,
         name         = {},
         aftername    = \quad,
@@ -63,7 +66,7 @@
         afterskip    = {2ex},
     },
     section={
-        format       = \zihao{-3}\bfseries\centering,
+        format       = \zihao{-3}\raggedright,
         number       = \thesection,
         name         = {},
         aftername    = \quad,
@@ -72,7 +75,8 @@
         afterskip    = {0.5ex},
     },
     subsection={
-        format       = \zihao{4}\bfseries\centering,
+        format       = \zihao{4}\raggedright,
+        format+      = \qquad,
         number       = \thesubsection,
         name         = {},
         aftername    = \quad,
@@ -110,7 +114,12 @@
 \pagestyle{fancy}
 \fancyhead{}
 \fancyhead[CE]{\songti \zihao{5} {西安交通大学毕业设计(论文)}}
-\fancyhead[CO]{\songti \zihao{5} {\ifnum \value{page}=1 摘要 \else{\leftmark} \fi}}
+\fancyhead[CO]{\songti \zihao{5} {
+    \ifnum \value{page}=1 摘要
+    \else \ifnum \value{theacknowledgement}>0 致谢
+    \else \ifnum \value{theappendix}>1 附录
+    \else {\leftmark} \fi \fi \fi}
+    }
 \fancyfoot{}
 \fancyfoot[RO,LE]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
@@ -143,9 +152,28 @@
 \newcommand{\ekeywords}[1]{ \noindent \zihao{5} \textbf{KEY WORDS:} \zihao{5} #1}
 
 %% \firstpage
+\newcommand{\@titlenamea}{}
+\newcommand{\titlenamea}[1]{\renewcommand{\@titlenamea}{#1}}
+\newcommand{\@titlenameb}{}
+\newcommand{\titlenameb}[1]{\renewcommand{\@titlenameb}{#1}}
+\newcommand{\@xueyuan}{}
+\newcommand{\xueyuan}[1]{\renewcommand{\@xueyuan}{#1}}
+\newcommand{\@zhuanye}{}
+\newcommand{\zhuanye}[1]{\renewcommand{\@zhuanye}{#1}}
+\newcommand{\@banji}{}
+\newcommand{\banji}[1]{\renewcommand{\@banji}{#1}}
+\newcommand{\@name}{}
+\newcommand{\name}[1]{\renewcommand{\@name}{#1}}
+\newcommand{\@xuehao}{}
+\newcommand{\xuehao}[1]{\renewcommand{\@xuehao}{#1}}
+\newcommand{\@teacher}{}
+\newcommand{\teacher}[1]{\renewcommand{\@teacher}{#1}}
+\newcommand{\@danwei}{}
+\newcommand{\danwei}[1]{\renewcommand{\@danwei}{#1}}
+
 \newcommand\dlmu[2]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
 
-\newcommand{\firstpage}[9]{
+\newcommand{\cover}{
     \begin{titlepage}
         \begin{figure}
           \centering
@@ -158,18 +186,18 @@
 
             \zihao{3} \songti \bfseries
             \begin{tabular}{ll}
-              题 \quad 目 & \dlmu{10cm}{#1} \\
-               & \dlmu{10cm}{#2} \\
+              题 \quad 目 & \dlmu{10cm}{\@titlenamea} \\
+               & \dlmu{10cm}{\@titlenameb} \\
             \end{tabular}
             \vskip 15ex
 
-            \dlmu{3cm}{#3} 学院  \dlmu{3cm}{#4} 系（专业） \dlmu{3cm}{#5} 班\\
+            \dlmu{3cm}{\@xueyuan} 学院  \dlmu{3cm}{\@zhuanye} 系（专业） \dlmu{3cm}{\@banji} 班\\
             \renewcommand\arraystretch{2.5}
             \begin{tabular}{cc}
-              学生姓名 & \dlmu{10cm}{#6} \\
-              学\qquad号 & \dlmu{10cm}{#7} \\
-              指导教师 & \dlmu{10cm}{#8} \\
-              设计所在单位 & \dlmu{10cm}{#9} \\
+              学生姓名 & \dlmu{10cm}{\@name} \\
+              学\qquad号 & \dlmu{10cm}{\@xuehao} \\
+              指导教师 & \dlmu{10cm}{\@teacher} \\
+              设计所在单位 & \dlmu{10cm}{\@danwei} \\
             \end{tabular}
             \vskip 5ex
             \number\year年\number\month月\\
@@ -196,13 +224,14 @@
 
 %% appendix enviroment
 \newenvironment{appendixs}{
-    \addtocounter{theappendix}{1}
     \chapter*{附录\arabic{theappendix}}
+    \addtocounter{theappendix}{1}
     \addcontentsline{toc}{chapter}{附录\arabic{theappendix}}
 }{}
 
 %% acknowledgement enviroment
 \newenvironment{acknowledgement}{
     \chapter*{致\quad谢}
+    \addtocounter{theacknowledgement}{1}
     \addcontentsline{toc}{chapter}{致谢}
 }{}
