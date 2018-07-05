@@ -1,7 +1,8 @@
 % A Temlapte for XJTU
 % Based on book
-%\NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{XJTUthesis} \LoadClass[openany, linespread=1.2]{ctexbook}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{XJTUthesis}
+\LoadClass[openany,linespread=1.2]{ctexbook}
 
 %% Option provided
 \DeclareOption{bachelor}{\relax}
@@ -16,22 +17,17 @@
 \RequirePackage{color}
 \RequirePackage{setspace}
 \RequirePackage{fancyhdr}
-%\RequirePackage{titlesec}
-%\RequirePackage{titletoc}
 \RequirePackage{booktabs} %三线表
 \RequirePackage{makecell}
 \RequirePackage{amsmath}
 \RequirePackage{times}
-%\RequirePackage{indentfirst}
 \RequirePackage[titles]{tocloft} %required to generate content with dots
-\RequirePackage{algorithmic}
-\RequirePackage{algorithm}
-\RequirePackage{listings}
-\RequirePackage{xcolor}
-\RequirePackage{pdfpages}
+\RequirePackage{algorithmic} \RequirePackage{algorithm}
+\RequirePackage{listings} \RequirePackage{xcolor} \RequirePackage{pdfpages}
 \RequirePackage[backend=biber,bibstyle=gb7714-2015,citestyle=gb7714-2015]{biblatex}
 \RequirePackage[colorlinks=true,pdfstartview=FitH,linkcolor=black,anchorcolor=violet,citecolor=black]{hyperref}
 
+%% to be finished
 \makeatletter
 \newif\ifxjtu@bachelor
 \newif\ifxjtu@master
@@ -52,6 +48,19 @@
 
 \PassOptionsToPackage{no-math}{fontspec}
 
+% font setting
+\setCJKmainfont[BoldFont = FandolSong-Bold]{FandolSong}
+\setCJKfamilyfont{song}[BoldFont =  FandolSong-Bold]{FandolSong}
+\newcommand{\song}{\CJKfamily{song}}
+\setCJKfamilyfont{hei}[BoldFont =  FandolHei-Bold]{FandolHei}
+\newcommand{\hei}{\CJKfamily{hei}}
+\setCJKfamilyfont{fang}[AutoFakeBold = 2]{FandolFang}
+\newcommand{\fang}{\CJKfamily{fang}}
+\setCJKfamilyfont{kai}[AutoFakeBold = 2]{FandolKai}
+\newcommand{\kai}{\CJKfamily{kai}}
+\setmainfont{Times New Roman}
+
+% ctex setting
 \ctexset{
     contentsname     = {\zihao{3} 目 \qquad 录},
     bibname          = {\zihao{3} 参考文献},
@@ -103,8 +112,8 @@
 
 %% margin setting
 \geometry{a4paper,top=3.0cm,bottom=2.5cm,left=2.6cm,right=2.6cm}
-\setlength{\headsep}{1cm}
-\setlength{\footskip}{0.75cm}
+\setlength{\headheight}{2cm} \setlength{\voffset}{-0.5in}
+\setlength{\headsep}{1cm} \setlength{\footskip}{0.75cm}
 
 %% change the code of picture and table
 \renewcommand {\thetable} {\thechapter-\arabic{table}}
@@ -113,8 +122,9 @@
 %% head and foot
 \pagestyle{fancy}
 \fancyhead{}
-\fancyhead[CE]{\songti \zihao{5} {西安交通大学毕业设计(论文)}}
-\fancyhead[CO]{\songti \zihao{5} {
+\fancyhead[CE]{\song \zihao{5} {西安交通大学毕业设
+计(论文)}}
+\fancyhead[CO]{\song \zihao{5} {
     \ifnum \value{page}=1 摘要
     \else \ifnum \value{theacknowledgement}>0 致谢
     \else \ifnum \value{theappendix}>1 附录
@@ -123,18 +133,18 @@
 \fancyfoot{}
 \fancyfoot[RO,LE]{\thepage}
 \renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
 % double line head
 \newcommand{\makeheadrule}{%
 \makebox[0pt][l]{\rule[0.5\baselineskip]{\headwidth}{0.5pt}}%
-\rule[0.7\baselineskip]{\headwidth}{0.5pt}}
+\rule[0.58\baselineskip]{\headwidth}{0.5pt}}
 \renewcommand{\headrule}{%
-{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
-\makeheadrule}}
+{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi \makeheadrule}}
 
 %% abstract && keywords
 \newenvironment{abstract}{
-	\begin{center} \songti \zihao{3}{摘 \qquad 要} \\ \end{center}
+	\begin{center} \song \zihao{3}{摘 \qquad 要} \\ \end{center}
 	\par
     \zihao{-4}
 }{\\}
@@ -171,7 +181,7 @@
 \newcommand{\@danwei}{}
 \newcommand{\danwei}[1]{\renewcommand{\@danwei}{#1}}
 
-\newcommand{\dlmu}[2]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
+\newcommand{\dlmu}[2]{\hskip 1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip 1pt}
 
 \newcommand{\cover}{
     \bfseries
@@ -182,29 +192,30 @@
         \end{figure}
 
         \begin{center}
-            {\color{red} \fangsong \zihao{-0} \textbf{毕业设计（论文）}}
+            {\color{red} \fang \zihao{-0} 毕业设计（论文）}
             \vskip 15ex
 
-            \zihao{3} \songti
+            \zihao{3} \song
             \begin{tabular}{ll}
-              题 \quad 目 & \dlmu{10cm}{\@titlenamea} \\
-               & \dlmu{10cm}{\@titlenameb} \\
+              题 \quad 目 & \dlmu{11cm}{\@titlenamea} \\
+               & \dlmu{11cm}{\@titlenameb} \\
             \end{tabular}
             \vskip 15ex
 
             \dlmu{3cm}{\@xueyuan} 学院  \dlmu{3cm}{\@zhuanye} 系（专业） \dlmu{3cm}{\@banji} 班\\
             \renewcommand\arraystretch{2.5}
             \begin{tabular}{cc}
-              学生姓名 & \dlmu{10cm}{\@name} \\
-              学 \qquad 号 & \dlmu{10cm}{\@xuehao} \\
-              指导教师 & \dlmu{10cm}{\@teacher} \\
-              设计所在单位 & \dlmu{10cm}{\@danwei} \\
+              学生姓名 & \dlmu{11cm}{\@name} \\
+              学 \qquad 号 & \dlmu{11cm}{\@xuehao} \\
+              指导教师 & \dlmu{11cm}{\@teacher} \\
+              设计所在单位 & \dlmu{11cm}{\@danwei} \\
             \end{tabular}
             \vskip 5ex
             \number \year 年 \number \month 月\\
             \setcounter{page}{0}
         \end{center}
     \end{titlepage}
+    \mdseries
 }
 
 
