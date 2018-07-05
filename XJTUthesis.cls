@@ -1,8 +1,7 @@
 % A Temlapte for XJTU
 % Based on book
 %\NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{XJTUthesis}
-\LoadClass[UTF8,openany, linespread=1.2]{ctexbook}
+\ProvidesClass{XJTUthesis} \LoadClass[openany, linespread=1.2]{ctexbook}
 
 %% Option provided
 \DeclareOption{bachelor}{\relax}
@@ -31,7 +30,7 @@
 \RequirePackage{xcolor}
 \RequirePackage{pdfpages}
 \RequirePackage[backend=biber,bibstyle=gb7714-2015,citestyle=gb7714-2015]{biblatex}
-\RequirePackage[colorlinks=true,pdfstartview=FitH,linkcolor=black,anchorcolor=violet,citecolor=magenta]{hyperref}
+\RequirePackage[colorlinks=true,pdfstartview=FitH,linkcolor=black,anchorcolor=violet,citecolor=black]{hyperref}
 
 \makeatletter
 \newif\ifxjtu@bachelor
@@ -58,7 +57,7 @@
     bibname          = {\zihao{3} 参考文献},
     chapter={
         pagestyle    = fancy,
-        format       = \zihao{3}\centering,
+        format       = \zihao{3} \centering,
         number       = \thechapter,
         name         = {},
         aftername    = \quad,
@@ -67,7 +66,7 @@
         afterskip    = {2ex},
     },
     section={
-        format       = \zihao{-3}\raggedright,
+        format       = \zihao{-3} \raggedright,
         number       = \thesection,
         name         = {},
         aftername    = \quad,
@@ -76,7 +75,7 @@
         afterskip    = {0.5ex},
     },
     subsection={
-        format       = \zihao{4}\raggedright,
+        format       = \zihao{4} \raggedright,
         format+      = \qquad,
         number       = \thesubsection,
         name         = {},
@@ -135,7 +134,7 @@
 
 %% abstract && keywords
 \newenvironment{abstract}{
-	\begin{center}\songti\zihao{3}{摘 \qquad 要} \\ \end{center}
+	\begin{center} \songti \zihao{3}{摘 \qquad 要} \\ \end{center}
 	\par
     \zihao{-4}
 }{\\}
@@ -143,7 +142,7 @@
 \newcommand{\keywords}[1]{\\ \zihao{5} \textbf{关键词：} \zihao{5} #1}
 % english version
 \newenvironment{eabstract}{
-	\begin{center}\songti\zihao{3}{ABSTRACT} \\ \end{center}
+	\begin{center} \zihao{3}{ABSTRACT} \\ \end{center}
 	\par
     \zihao{-4}
     \setlength{\parskip}{0.5\baselineskip}
@@ -175,6 +174,7 @@
 \newcommand{\dlmu}[2]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
 
 \newcommand{\cover}{
+    \bfseries
     \begin{titlepage}
         \begin{figure}
           \centering
@@ -185,7 +185,7 @@
             {\color{red} \fangsong \zihao{-0} \textbf{毕业设计（论文）}}
             \vskip 15ex
 
-            \zihao{3} \songti \bfseries
+            \zihao{3} \songti
             \begin{tabular}{ll}
               题 \quad 目 & \dlmu{10cm}{\@titlenamea} \\
                & \dlmu{10cm}{\@titlenameb} \\
@@ -202,7 +202,6 @@
             \end{tabular}
             \vskip 5ex
             \number \year 年 \number \month 月\\
-
             \setcounter{page}{0}
         \end{center}
     \end{titlepage}
