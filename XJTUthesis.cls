@@ -18,7 +18,7 @@
 \RequirePackage{setspace}
 \RequirePackage{enumitem} %conflict with enumerate
 \RequirePackage{fancyhdr}
-\RequirePackage{booktabs} %三线表
+\RequirePackage{booktabs} % 三线表
 \RequirePackage{makecell}
 \RequirePackage{mathtools,amsthm,amsfonts,amssymb,bm}
 \RequirePackage{tikz}
