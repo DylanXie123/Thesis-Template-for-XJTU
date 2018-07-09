@@ -16,16 +16,25 @@
 \RequirePackage{graphicx}
 \RequirePackage{color}
 \RequirePackage{setspace}
+\RequirePackage{enumitem} %conflict with enumerate
 \RequirePackage{fancyhdr}
 \RequirePackage{booktabs} %三线表
 \RequirePackage{makecell}
-\RequirePackage{amsmath}
-\RequirePackage{times}
+\RequirePackage{mathtools,amsthm,amsfonts,amssymb,bm}
+\RequirePackage{tikz}
 \RequirePackage[titles]{tocloft} %required to generate content with dots
-\RequirePackage{algorithmic} \RequirePackage{algorithm}
-\RequirePackage{listings} \RequirePackage{xcolor} \RequirePackage{pdfpages}
+\RequirePackage{algorithmic}
+\RequirePackage{algorithm}
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+\RequirePackage{pdfpages}
 \RequirePackage[backend=biber,bibstyle=gb7714-2015,citestyle=gb7714-2015]{biblatex}
 \RequirePackage[colorlinks=true,pdfstartview=FitH,linkcolor=black,anchorcolor=violet,citecolor=black]{hyperref}
+
+\usetikzlibrary{graphs}
+\setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setdescription{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
 
 %% to be finished
 \makeatletter
@@ -116,8 +125,9 @@
 \setlength{\headsep}{1cm} \setlength{\footskip}{0.75cm}
 
 %% change the code of picture and table
-\renewcommand {\thetable} {\thechapter-\arabic{table}}
-\renewcommand {\thefigure} {\thechapter-\arabic{figure}}
+\renewcommand {\thetable}{\thechapter-\arabic{table}}
+\renewcommand {\thefigure}{\thechapter-\arabic{figure}}
+\renewcommand {\theequation}{\thechapter-\arabic{equation}}
 
 %% head and foot
 \pagestyle{fancy}
