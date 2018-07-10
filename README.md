@@ -1,4 +1,5 @@
 # 西安交大毕业设计模板
+![](https://img.shields.io/badge/language-latex-orange.svg)
 
 ## 效果展示
 <div align="center">

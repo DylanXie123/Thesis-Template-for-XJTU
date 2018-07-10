@@ -35,43 +35,7 @@ This is a template.
 
 \chapter{前言}
 本模板针对西安交通大学毕业论文设计要求编写。可供需要完成毕业设计的同学使用。\par
-本模板已经设置好页边距、页眉、页脚、字体等问题，符合毕业设计要求。
-
-\chapter{用户手册}
-\section{毕业论文撰写要求}
-一篇完整的毕业论文或毕业设计说明书由封面、任务书、考核评议书、中文摘要、英文摘要、目录、正文（含结论）、致谢、参考文献、附录、封底等部分构成。正文字数不少于 15000 字（医、药类可根据学科特点，适当减少论文字数，但不得少于 10000 字），书写方式必须用计算机排版，白纸黑字双面打印，需要彩色打印的图例外\footnote{具体要求查看教务处网站}
-\begin{enumerate}
-  \item \textbf{题目}：即标题，它的主要作用是概括整篇论文的中心内容。因此，题目要确切、恰当、鲜明、简短，精炼。
-  \item \textbf{摘要}：摘要是论文的高度概括，是全文的缩影，是长篇论文不可缺少的组成部分。要求用中、英文分别书写，一篇摘要不少于 400 字。英文摘要与中文摘要的内容和格式必须一致
-  \item \textbf{目录}：反映论文的纲要。目录应列出通篇论文各组成部分的大小标题，分别层次，逐项标注页码，并包括注明参考文献、附录、索引等附属部分的页次，以便读者查找。
-  \item \textbf{正文}：论文的正文是作者对自己的研究工作详细的表述。
-  \item \textbf{参考文献}：文后著录的参考文献务必实事求是。论文中引用过的文献必须著录，未引用的文献不得出现。应遵循学术道德规范，避免涉嫌抄袭、剽窃等学术不端行为。
-  \item \textbf{附录}：在论文之后附上不便放进正文的重要数据、表格、公式、图纸、程序等资料，供读者阅读论文时参考。附录不宜太多，附录的篇幅一般不要超过正文。
-  \item \textbf{致谢}：对于毕业设计（论文）的指导教师，对毕业设计（论文）提过有益的建议或给予过帮助的同学、同事与集体，都应在论文的结尾部分书面致谢，言辞应恳切、实事求是。应注明受何种基金支持（没有可不写）。
-\end{enumerate}
-
-\section{本模板完成的设置}
-纸张、页边距、页眉和页脚、三级标题的样式、正文字体行距、图题和表题、页码、封面、中英文摘要、目录、参考文献、附录、致谢。
-\section{本模板提供的指令}
-\subsection{封面页生成}
-
-\begin{lstlisting}[language=tex]
-\titlenamea{西安交通大学}
-\titlenameb{\LaTeX 毕业设计模板}
-\xueyuan{电气学院}
-\zhuanye{电气工程}
-\banji{电气613}
-\name{谢晋安}
-\xuehao{0000000000}
-\teacher{\LaTeX \quad GitHub}
-\danwei{西安交通大学}
-\cover
-\end{lstlisting}
-
-\subsection{目录生成}
-\subsection{中英文摘要}
-\subsection{参考文献}
-\subsection{附录和致谢}
+已经设置好纸张、页边距、页眉和页脚、三级标题的样式、正文字体行距、图题和表题、页码、封面、中英文摘要、目录、参考文献、附录、致谢的问题，无需再手动设置。
 
 \chapter{\LaTeX 强大的排版功能}
 \section{微分算子及矢量运算}
@@ -110,6 +74,86 @@ This is a template.
   \nabla\cdot\bm{D} & =\rho
 \end{align}
 
+\chapter{排版实例}
+\section{\LaTeX 插入图片}
+
+插入图片实例
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{./figures/a4_2xbred.png}
+  \caption{校标}
+\end{figure}
+
+插入并排图片实例
+\begin{figure}[htbp]
+\centering
+\subfigure[红色校徽] { \label{jdxh:a}
+\includegraphics[width=0.35\textwidth]{./figures/a3_1jdxhred.png}
+}
+\qquad \qquad
+\subfigure[蓝色校徽] { \label{jdxh:b}
+\includegraphics[width=0.35\textwidth]{./figures/a3_2jdxhblue.png}
+}
+\caption{校徽}
+\label{jdxh}
+\end{figure}
+
+\section{\LaTeX 插入表格}
+表\ref{tab:test}是常用的三线表
+
+\begin{longtable}{ccccc}
+    \caption{三线表实例}\\
+    \toprule
+    \multirow{2}*{项目} & \multicolumn{2}{c}{层流} & \multicolumn{2}{c}{紊流} \\
+    \cline{2-5}
+    ~ & $0^\circ$截面  & $90^\circ$截面  & $0^\circ$截面  & $90^\circ$截面  \\
+    \midrule
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    \bottomrule
+\end{longtable}
+
+\section{字体}
+字体设置实例\footnote{字体改变推荐采用字体集的方式，需要同时加粗、斜体可采用textbf,emph命令}
+\begin{longtable}{ccc}
+    \caption{字体设置实例}\\
+    \toprule
+    字体设置 & 命令 & 效果 \\
+    \midrule
+    楷书、小初号、七号 & \verb|{\kai \zihao{7} 测试}| & {\kai \zihao{7} 测试} \\
+    仿宋、斜体 & \verb|{\fang \slshape 测试}| & {\fang \slshape 测试} \\
+    黑体、加粗 & \verb|{\hei \bfseries 测试}| & {\hei \bfseries 测试} \\
+    宋体、加粗、小初号 & \verb|{\song \bfseries \zihao{-0} 测试}| & {\song \bfseries \zihao{-0} 测试} \\
+    \bottomrule
+\end{longtable}
+
+\section{插入代码}
+\begin{lstlisting}[language=c++]
+//冒泡排序
+int* BubbleSort(int* ary, int length)
+{
+    int i, j, tmp;
+    for(i=0; i<length-1; i++)
+    {
+        tmp = ary[i];
+
+        for(j=length-1; j>i; j--)
+        {
+            //找到数组中最小的数，并交换
+            if(tmp > ary[j])
+            {
+                ary[i] = ary[j];
+                ary[j] = tmp;
+                tmp = ary[i];
+            }
+        }
+    }
+
+    return ary;
+}
+\end{lstlisting}
+
 \chapter{TIKZ}
 \begin{tikzpicture}
 [every node/.style={fill=blue!30,draw=blue!70,rounded corners},
@@ -141,20 +185,7 @@ This is a template.
 
 
 \chapter{一些环境}
-表\ref{tab:test}是常用的三线表
-\begin{table}[htbp]
-    \centering
-    \begin{tabular}{lcl}
-        \toprule
-        。。 & 。。 & 。。 \\
-        \midrule
-        。。 & 。。 & 。。 \\
-        。。 & 。。 & 。。 \\
-        。。 & 。。 & 。。 \\
-        \bottomrule
-    \end{tabular}
-    \caption{\label{tab:test}示例表格}
-\end{table}
+
 algorithm环境
 \begin{algorithm}
     \caption{Calculate $y = x^n$}
