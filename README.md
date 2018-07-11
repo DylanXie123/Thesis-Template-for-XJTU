@@ -3,10 +3,10 @@
 
 ## 效果展示
 <div align="center">
-    <img src="./figures/coverpage.png" height=200>
-    <img src="./figures/picture.png" height=200>
-    <img src="./figures/equation.png" height=200>
-    <img src="./figures/reference.png" height=200>
+    <img src="./figures/coverpage.png" height=300>
+    <img src="./figures/picture.png" height=300>
+    <img src="./figures/equation.png" height=300>
+    <img src="./figures/reference.png" height=300>
 </div>
 
 ## 使用方法
