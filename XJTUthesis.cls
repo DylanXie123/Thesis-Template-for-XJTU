@@ -2,7 +2,7 @@
 % Based on book
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{XJTUthesis}
-\LoadClass[openany,linespread=1.2]{ctexbook}
+\LoadClass[UTF8,openany,linespread=1.2]{ctexbook}
 
 %% Option provided
 \DeclareOption{bachelor}{\relax}
@@ -32,7 +32,7 @@
 \RequirePackage{listings}
 \RequirePackage{xcolor}
 \RequirePackage{pdfpages}
-\RequirePackage[backend=biber,bibstyle=gb7714-2015,citestyle=gb7714-2015]{biblatex}
+\RequirePackage[backend=biber,bibstyle=gb7714-2015,citestyle=gb7714-2015,seconds=true]{biblatex}
 \RequirePackage[colorlinks=true,pdfstartview=FitH,linkcolor=black,anchorcolor=violet,citecolor=black]{hyperref}
 
 \usetikzlibrary{graphs}
@@ -158,22 +158,20 @@
 
 %% abstract && keywords
 \newenvironment{abstract}{
-	\begin{center} \song \zihao{3}{摘 \qquad 要} \\ \end{center}
-	\par
+    {\centering \song\zihao{3}{摘 \qquad 要} \par}
     \zihao{-4}
-}{\\}
+}{}
 
-\newcommand{\keywords}[1]{\\ \zihao{5} \textbf{关键词：} \zihao{5} #1}
+\newcommand{\keywords}[1]{\\[\baselineskip] \zihao{5} \textbf{关键词：} \zihao{5} #1}
 % english version
 \newenvironment{eabstract}{
-	\begin{center} \zihao{3}{ABSTRACT} \\ \end{center}
-	\par
+    {\centering \zihao{3}{ABSTRACT} \par}
     \zihao{-4}
     \setlength{\parskip}{0.5\baselineskip}
     \setlength{\parindent}{0em}
-}{\\}
+}{}
 
-\newcommand{\ekeywords}[1]{ \noindent \zihao{5} \textbf{KEY WORDS:} \zihao{5} #1}
+\newcommand{\ekeywords}[1]{\\[\baselineskip] \noindent \zihao{5} \textbf{KEY WORDS:} \zihao{5} #1}
 
 %% \firstpage
 \newcommand{\@titlenamea}{}
