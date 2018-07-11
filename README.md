@@ -3,8 +3,10 @@
 
 ## 效果展示
 <div align="center">
-    <img src="./figures/coverpage.png" height=300>
-    <img src="./figures/equation.png" height=300>
+    <img src="./figures/coverpage.png" height=200>
+    <img src="./figures/picture.png" height=200>
+    <img src="./figures/equation.png" height=200>
+    <img src="./figures/reference.png" height=200>
 </div>
 
 ## 使用方法
@@ -14,6 +16,7 @@
 ```
 xelatex -> biber -> xelatex -> xelatex
 ```
+实现一键编译请参考[DXie123的博客](https://dxie123.github.io/2018/07/11/latexcompile/)
 
 ### 注意事项
 * 三级标题分别为`chapter`，`section`，`subsection`

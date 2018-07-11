@@ -88,7 +88,7 @@
         afterskip    = {2\baselineskip},
     },
     section={
-        format       = \zihao{-3} \raggedright,
+        format       = \zihao{-3}\raggedright\bfseries,
         number       = \thesection,
         name         = {},
         aftername    = \quad,
@@ -97,7 +97,7 @@
         afterskip    = {0.5\baselineskip},
     },
     subsection={
-        format       = \zihao{4} \raggedright,
+        format       = \zihao{4}\raggedright\bfseries,
         format+      = \qquad,
         number       = \thesubsection,
         name         = {},

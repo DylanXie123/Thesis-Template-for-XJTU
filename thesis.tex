@@ -102,15 +102,78 @@ This is a template.
 表\ref{tab:test}是常用的三线表
 
 \begin{longtable}{ccccc}
-    \caption{三线表实例}\\
+    \caption{三线表实例} \label{tab:test}\\
+    
+    %head and foot setting
     \toprule
     \multirow{2}*{项目} & \multicolumn{2}{c}{层流} & \multicolumn{2}{c}{紊流} \\
     \cline{2-5}
     ~ & $0^\circ$截面  & $90^\circ$截面  & $0^\circ$截面  & $90^\circ$截面  \\
     \midrule
+    \endfirsthead
+    
+    {\bf 表~\ref{tab:test}（续）}\\
+    \toprule
+    \multirow{2}*{项目} & \multicolumn{2}{c}{层流} & \multicolumn{2}{c}{紊流} \\
+    \cline{2-5}
+    ~ & $0^\circ$截面  & $90^\circ$截面  & $0^\circ$截面  & $90^\circ$截面  \\
+    \midrule
+    \endhead
+    
+    \bottomrule
+    \endfoot
+    
+    \endlastfoot
+    
+    % table content
     理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
     计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
     误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\
+    理论值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.30 & 1.25 \\
+    计算值$V_{max}$/ \si{m.s^{-1}} & 0.04 & 0.03 & 1.26 & 1.21\\
+    误差 / \%                      & 0.00 & 3.12 & 3.07 & 3.20\\                      
     \bottomrule
 \end{longtable}
 
@@ -154,35 +217,47 @@ int* BubbleSort(int* ary, int length)
 }
 \end{lstlisting}
 
-\chapter{TIKZ}
-\begin{tikzpicture}
-[every node/.style={fill=blue!30,draw=blue!70,rounded corners},
- edge from parent/.style={blue,thick,draw}]
-    \node {root}
-        child {node {a1}}
-        child {node {a2}
-            child {node {b1}}
-            child {node {b2}}}
-        child {node {a3}};
-\end{tikzpicture}
+\section{参考文献}
+\begin{itemize}
+  \item 引用中文参考文献\cite{冯慈璋2000工程电磁场导论}
+  \item 引用英文参考文献\cite{Xing2002Distance}
+  \item 引用多个参考文献\cite{成永红2001电力设备绝缘检测与诊断,成永红2004气体绝缘系统中典型缺陷的超宽频带放电信号的分形分析,吴锴2013纳米粒子改性聚乙烯直流电缆绝缘材料研究}
+  \item 引用在线资源\cite{github}
+\end{itemize}
+引用参考文献只需在正文中相应位置插入\verb|\cite{}|。 \\
+打印参考文献表可用\verb|\printbibliography[heading=bibliography,title=参考文献]|。
 
-\begin{tikzpicture}[domain=0:4]
-\draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
-\draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
-\draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
-\draw[color=red]    plot (\x,{0.5*\x*cos(\x r)})             node[right] {$f(x) =x\cos x$};
-% \x r 表示弧度
-\draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
-\draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
-\end{tikzpicture}
+\subsection{bib文件介绍}
+\LaTeX 中的参考文献是通过参考文献数据源文件即bib文件实现的，bib文件中的一个参考文献格式如下：
+\begin{lstlisting}[language=tex]
+@book{冯慈璋2000工程电磁场导论, %参考文献索引号，正文中用\cite{冯慈璋2000工程电磁场导论}来索引该文献
+  title={工程电磁场导论},
+  author={冯慈璋 and 马西奎},
+  publisher={高等教育出版社},
+  year={2000},
+  keywords={电磁场},
+  abstract={本书较好地处理了与物理学中电磁学相衔接的内容。删去了狭义相对论和各向异性媒质中电磁场的内容,增加了准静态电磁场和波导与谐振腔的相应内容,适当拓展了强电专业的电磁场知识范围。书中突出了电磁场理论在工程实际中的应用。},
+}
+\end{lstlisting}
+有部分参考文献中可能会出现$\%,\backslash$ 等\LaTeX 中的特殊字符，导致编译失败，这需要我们手动去调整bib文件中的内容。\par
+biblatex宏包还给出了添加电子资源的样式：
+\begin{lstlisting}[language=tex]
+@online{github, %online 类型资源
+    title={Thesis-Template-for-XJTU},
+    author={DXie123},
+    year={2018},
+    url={https://github.com/DXie123/Thesis-Template-for-XJTU},
+}
+\end{lstlisting}
 
-\begin{tikzpicture}
-    \graph {
-        "$x_1$" -> "$x_2$"[red] -> "$x_3,x_4$";
-        "$x_1$" ->[bend left] "$x_3,x_4$";
-    };
-\end{tikzpicture}
-
+\subsection{bib文件生成}
+生成bib文件的方式有很多种，专业的软件包括Jabref等，对于本科生毕业设计，比较推荐的是采用百度学术、谷歌学术、必应学术等网站生成bib文件，用百度学术生成bib文件的过程如图\ref{fig:bib}所示
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{./figures/xueshu.png}
+  \caption{百度学术生成bib文件}\label{fig:bib}
+\end{figure}
+需要注意的是，有部分文档可能会出现信息不全，如\cite{成永红2001电力设备绝缘检测与诊断}缺少出版地，这时，我们需要手动添加所缺信息（添加\verb|location={陕西}|）。各类参考文献需要的信息可在biblatex文档中查看，也可直接查看编译后的参考文献是否缺失信息。
 
 \chapter{一些环境}
 
@@ -231,11 +306,35 @@ for i=1:100
 end
 \end{lstlisting}
 
-\chapter{杂项}
+TIKZ环境用于生成各种图形\\
 
-\begin{appendixs}
-测试
-\end{appendixs}
+\begin{tikzpicture}
+[every node/.style={fill=blue!30,draw=blue!70,rounded corners},
+ edge from parent/.style={blue,thick,draw}]
+    \node {root}
+        child {node {a1}}
+        child {node {a2}
+            child {node {b1}}
+            child {node {b2}}}
+        child {node {a3}};
+\end{tikzpicture}
+
+\begin{tikzpicture}[domain=0:4]
+\draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
+\draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
+\draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
+\draw[color=red]    plot (\x,{0.5*\x*cos(\x r)})             node[right] {$f(x) =x\cos x$};
+% \x r 表示弧度
+\draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
+\draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+    \graph {
+        "$x_1$" -> "$x_2$"[red] -> "$x_3,x_4$";
+        "$x_1$" ->[bend left] "$x_3,x_4$";
+    };
+\end{tikzpicture}
 
 \begin{appendixs}
 测试
