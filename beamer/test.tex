@@ -1,14 +1,63 @@
 \documentclass{beamer}
 
+\usepackage{pgfpages}
 \usepackage{ctex}
-\usetheme{Luebeck}
+\useoutertheme[footline=authorinstitutetitle]{miniframes}
+\setbeameroption{show notes on second screen}
+\mode<presentation>
+\newcommand{\frameofframes}{/}
+\newcommand{\setframeofframes}[1]{\renewcommand{\frameofframes}{#1}}
+\setbeamertemplate{footline} 
+{%
+  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+    leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+    \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
+    \hfill%
+    {\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+    leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+    {\usebeamerfont{title in head/foot}\insertshorttitle}%
+    \hfill%
+    {\usebeamerfont{frame number}\usebeamercolor[fg]{frame number}\insertframenumber~\frameofframes~\inserttotalframenumber}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+  \end{beamercolorbox}
+}
+\useinnertheme{rectangles}
+\usecolortheme{whale}
+\usecolortheme{orchid}
+
+\xdefinecolor{tsinghua}{rgb}{0.455,0.204,0.506}  %RGB#82318E
+\setbeamercolor{frametitle}{bg=tsinghua,fg=white}
+\setbeamercolor{title}{fg=white,bg=tsinghua}
+\setbeamerfont{frametitle}{size=\large}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamercolor{block title}{bg=tsinghua}
+\setbeamercolor{block title example}{use={normal text,example text},fg=example text.fg!75!normal text.fg,bg=tsinghua text.bg!75!black}
+\setbeamercolor{fine separation line}{}
+\setbeamercolor{item projected}{fg=black}
+\setbeamercolor{palette sidebar primary}{use=normal text,fg=normal text.fg}
+\setbeamercolor{palette sidebar quaternary}{use=structure,fg=structure.fg}
+\setbeamercolor{palette sidebar secondary}{use=structure,fg=structure.fg}
+\setbeamercolor{palette sidebar tertiary}{use=normal text,fg=normal text.fg}
+\setbeamercolor{section in sidebar}{fg=brown}
+\setbeamercolor{section in sidebar shaded}{fg= grey}
+\setbeamercolor{separation line}{}
+\setbeamercolor{sidebar}{bg=tsinghua}
+\setbeamercolor{sidebar}{parent=palette primary}
+\setbeamercolor{structure}{fg=tsinghua}
+\setbeamercolor{subsection in sidebar}{fg=brown}
+\setbeamercolor{subsection in sidebar shaded}{fg=grey}
 
 \begin{document}
 
-\title{中文}
-\author{谢}
-\date[ISPN ’80]{27th International Symposium of Prime Numbers}
-
+\title{TEST}
+\author{DX}
+\institute{大学}
 \begin{frame}
   \titlepage
 \end{frame}
@@ -20,24 +69,37 @@
 
 \section{first section}
 \begin{frame}
-  \frametitle{start}{origin of \LaTeX}
+  \frametitle{1}
+  test information
 \end{frame}
 
 \section{second section}
+\subsection{first subsection}
 \begin{frame}
-  \frametitle{hello}{origin of \LaTeX}
+  \frametitle{hello}
+  \begin{block}{碰撞检测问题}
+    计算机图形学、虚拟现实等领域中的研究热点，
+    是计算机模拟真实环境中不可或缺的技术，
+    在物理仿真及游戏领域里应用十分广泛。
+  \end{block}
+  \note{
+    凸包围体技术在计算机图形学领域里的各种算法中发挥着重要作用，如优化渲染和建模过程，加速求交、碰撞检测等算法。
+    主要是用在原始模型之间的相关计算（遮挡测试、相交测试等）之前进行预处理判断和剪枝，以求交算法为例，如果两个模型相交，则对应的凸包围体一定相交，
+    若凸包围体不相交则其对应的原始模型一定不相交。而一般来讲，判断凸包围体是否相交比判断原始模型相交更简单，因此可以提升效率。
+    
+    碰撞检测问题是计算机图形学、虚拟现实等领域中的研究热点，是计算机模拟真实环境中不可或缺的技术，在物理仿真及游戏领域里应用十分广泛。
+    例如在游戏中，碰撞检测技术增强了游戏的真实性，游戏中的角色行走不可穿墙、角色中弹而亡等等都离不开碰撞检测技术。
+  }
 \end{frame}
 
-\subsection{detail}
+\subsection{second subsection}
 \begin{frame}
-  \frametitle{test}{fun}
-have fun
+  \frametitle{test}
 \end{frame}
 
 \section{third section}
 \begin{frame}
-  \frametitle{hello}{hi}
-good job
+  \frametitle{hello}
 \end{frame}
 
 \end{document} 
