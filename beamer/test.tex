@@ -1,57 +1,18 @@
 \documentclass{beamer}
 
-\usepackage{pgfpages}
 \usepackage{ctex}
 \useoutertheme[footline=authorinstitutetitle]{miniframes}
-\setbeameroption{show notes on second screen}
-\mode<presentation>
-\newcommand{\frameofframes}{/}
-\newcommand{\setframeofframes}[1]{\renewcommand{\frameofframes}{#1}}
-\setbeamertemplate{footline} 
-{%
-  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
-  \end{beamercolorbox}
-  \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
-    leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
-    \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
-    \hfill%
-    {\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
-    leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
-    {\usebeamerfont{title in head/foot}\insertshorttitle}%
-    \hfill%
-    {\usebeamerfont{frame number}\usebeamercolor[fg]{frame number}\insertframenumber~\frameofframes~\inserttotalframenumber}
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
-  \end{beamercolorbox}
-}
 \useinnertheme{rectangles}
-\usecolortheme{whale}
-\usecolortheme{orchid}
+%\usecolortheme{crane}
 
-\xdefinecolor{tsinghua}{rgb}{0.455,0.204,0.506}  %RGB#82318E
-\setbeamercolor{frametitle}{bg=tsinghua,fg=white}
-\setbeamercolor{title}{fg=white,bg=tsinghua}
-\setbeamerfont{frametitle}{size=\large}
-\setbeamertemplate{navigation symbols}{}
+\xdefinecolor{xjtu}{RGB}{0,78,151}
+\xdefinecolor{xjtubak}{RGB}{0,46,230}
 
-\setbeamercolor{block title}{bg=tsinghua}
-\setbeamercolor{block title example}{use={normal text,example text},fg=example text.fg!75!normal text.fg,bg=tsinghua text.bg!75!black}
-\setbeamercolor{fine separation line}{}
-\setbeamercolor{item projected}{fg=black}
-\setbeamercolor{palette sidebar primary}{use=normal text,fg=normal text.fg}
-\setbeamercolor{palette sidebar quaternary}{use=structure,fg=structure.fg}
-\setbeamercolor{palette sidebar secondary}{use=structure,fg=structure.fg}
-\setbeamercolor{palette sidebar tertiary}{use=normal text,fg=normal text.fg}
-\setbeamercolor{section in sidebar}{fg=brown}
-\setbeamercolor{section in sidebar shaded}{fg= grey}
-\setbeamercolor{separation line}{}
-\setbeamercolor{sidebar}{bg=tsinghua}
-\setbeamercolor{sidebar}{parent=palette primary}
-\setbeamercolor{structure}{fg=tsinghua}
-\setbeamercolor{subsection in sidebar}{fg=brown}
-\setbeamercolor{subsection in sidebar shaded}{fg=grey}
+\setbeamercolor{structure}{bg=xjtu}
+\setbeamercolor{title}{fg=white,bg=xjtu}
+\setbeamercolor{frametitle}{fg=white,bg=xjtu}
+\setbeamercolor{block title}{fg=white,bg=xjtubak}
+
 
 \begin{document}
 
@@ -70,13 +31,16 @@
 \section{first section}
 \begin{frame}
   \frametitle{1}
-  test information
+  \begin{itemize}
+    \item Your answer is \usebeamertemplate{answer}.
+    \item hello world!
+  \end{itemize}
 \end{frame}
 
 \section{second section}
 \subsection{first subsection}
 \begin{frame}
-  \frametitle{hello}
+  \frametitle{2.1}
   \begin{block}{碰撞检测问题}
     计算机图形学、虚拟现实等领域中的研究热点，
     是计算机模拟真实环境中不可或缺的技术，
@@ -94,12 +58,14 @@
 
 \subsection{second subsection}
 \begin{frame}
-  \frametitle{test}
+  \frametitle{2.2}
+  test information
 \end{frame}
 
 \section{third section}
 \begin{frame}
-  \frametitle{hello}
+  \frametitle{3}
+  test information
 \end{frame}
 
 \end{document} 
