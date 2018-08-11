@@ -1,47 +1,34 @@
 \documentclass{beamer}
 
 \usepackage{ctex}
-\useoutertheme[footline=authorinstitutetitle]{miniframes}
-\useinnertheme{rectangles}
-\usecolortheme{whale}
-%\usecolortheme{crane}
+\usepackage{multimedia}
+%\usepackage{xjtubeamer}  
+\usecolortheme{crane}
 
-\newcommand{\frameofframes}{/}
-\newcommand{\setframeofframes}[1]{\renewcommand{\frameofframes}{#1}}
+\setbeamercolor{author in head/foot}{fg=white,bg=blue}
+\setbeamercolor{frametitle}{fg=white,bg=blue}
+
 \setbeamertemplate{footline} 
 {%
-  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
-  \end{beamercolorbox}
   \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
-    leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
-    \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
+    leftskip=.3cm,rightskip=.3cm]{author in head/foot}%
+    \insertshortauthor%
     \hfill%
-    {\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
+    \insertshortinstitute%
   \end{beamercolorbox}%
   \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
-    leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
-    {\usebeamerfont{title in head/foot}\insertshorttitle}%
+    leftskip=.3cm,rightskip=.3cm]{title in head/foot}%
+    {\insertshorttitle}%
     \hfill%
-    {\usebeamerfont{frame number}\usebeamercolor[fg]{frame number}\insertframenumber~\frameofframes~\inserttotalframenumber}
+    {\insertframenumber / \inserttotalframenumber}
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
-  \end{beamercolorbox}
 }
-
-\xdefinecolor{xjtu}{RGB}{0,78,151}
-\xdefinecolor{xjtubak}{RGB}{0,46,230}
-
-\setbeamercolor{structure}{bg=xjtu}
-\setbeamercolor{title}{fg=white,bg=xjtu}
-\setbeamercolor{frametitle}{fg=white,bg=xjtu}
-\setbeamercolor{block title}{fg=white,bg=xjtubak}
-
 
 \begin{document}
 
 \title{TEST}
 \author{DX}
-\institute{大学}
+\institute{XJTU}
 \begin{frame}
   \titlepage
 \end{frame}
@@ -55,7 +42,7 @@
 \begin{frame}
   \frametitle{1}
   \begin{itemize}
-    \item Your answer is \usebeamertemplate{answer}.
+    \item Your answer is correct.
     \item hello world!
   \end{itemize}
 \end{frame}
@@ -64,25 +51,24 @@
 \subsection{first subsection}
 \begin{frame}
   \frametitle{2.1}
-  \begin{block}{碰撞检测问题}
-    计算机图形学、虚拟现实等领域中的研究热点，
-    是计算机模拟真实环境中不可或缺的技术，
-    在物理仿真及游戏领域里应用十分广泛。
+  \begin{block}{block}
+    block information
   \end{block}
-  \note{
-    凸包围体技术在计算机图形学领域里的各种算法中发挥着重要作用，如优化渲染和建模过程，加速求交、碰撞检测等算法。
-    主要是用在原始模型之间的相关计算（遮挡测试、相交测试等）之前进行预处理判断和剪枝，以求交算法为例，如果两个模型相交，则对应的凸包围体一定相交，
-    若凸包围体不相交则其对应的原始模型一定不相交。而一般来讲，判断凸包围体是否相交比判断原始模型相交更简单，因此可以提升效率。
-    
-    碰撞检测问题是计算机图形学、虚拟现实等领域中的研究热点，是计算机模拟真实环境中不可或缺的技术，在物理仿真及游戏领域里应用十分广泛。
-    例如在游戏中，碰撞检测技术增强了游戏的真实性，游戏中的角色行走不可穿墙、角色中弹而亡等等都离不开碰撞检测技术。
-  }
+  \begin{alertblock}{alertblock}
+    alertblock information
+  \end{alertblock}
+  \begin{exampleblock}{exampleblock}
+    exampleblock information
+  \end{exampleblock}
 \end{frame}
 
 \subsection{second subsection}
 \begin{frame}
   \frametitle{2.2}
-  test information
+  \begin{enumerate}
+    \item yo're right
+    \item hello
+  \end{enumerate}
 \end{frame}
 
 \section{third section}
