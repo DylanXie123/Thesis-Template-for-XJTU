@@ -1,6 +1,9 @@
 \documentclass{beamer}
 
 \usepackage{ctex}
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{bm}
 
 \useoutertheme[footline=authorinstitutetitle]{miniframes}
 \useinnertheme{rectangles}
@@ -20,11 +23,11 @@
 \setbeamercolor{author in head/foot}{fg=white,bg=xjtublue}
 \setbeamercolor{title in head/foot}{fg=white,bg=xjtublue}
 \setbeamercolor{block title}{fg=white,bg=xjtubluebak}
-\setbeamercolor{block body}{bg=block title.bg!15!white}
+\setbeamercolor{block body}{bg=block title.bg!10!white}
 \setbeamercolor{block title example}{fg=white,bg=green}
-\setbeamercolor{block body example}{bg=block title example.bg!15!white}
+\setbeamercolor{block body example}{bg=block title example.bg!10!white}
 \setbeamercolor{block title alerted}{fg=white,bg=red}
-\setbeamercolor{block body alerted}{bg=block title alerted.bg!15!white}
+\setbeamercolor{block body alerted}{bg=block title alerted.bg!10!white}
 \setbeamercolor{item projected}{bg=xjtublue}
 \setbeamercolor{subitem projected}{bg=xjtublue}
 
@@ -51,7 +54,20 @@
 
 \begin{document}
 
-\title{TEST}
+\AtBeginSection[]
+{
+  \begin{frame}
+    \tableofcontents[currentsection,hideallsubsections]
+  \end{frame}
+}
+\AtBeginSubsection[]
+{
+  \begin{frame}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+\title{Seminar One}
 \author{DX}
 \institute{XJTU}
 \begin{frame}
@@ -63,44 +79,71 @@
   \tableofcontents %  [pausesections]
 \end{frame}
 
-\section{first section}
-\begin{frame}
-  \frametitle{1}
-  \begin{itemize}
-    \item Your answer is correct.
-    \begin{itemize}
-      \item subitem 1
-    \end{itemize}
-    \item hello world!
-  \end{itemize}
+\section{Topic One}
+\subsection{Converter Valve}
+\begin{frame}{Structure}
+  \begin{figure}
+    \subfigure[Real Image]{\includegraphics[clip=true,height=4.2cm]{figures/realimg}}\qquad
+    \subfigure[Structure]{\includegraphics[clip=true,height=4.2cm]{figures/structure}}
+    \caption{Converter Valve}
+  \end{figure}
 \end{frame}
 
-\section{second section}
-\subsection{first subsection}
-\begin{frame}
-  \frametitle{2.1}
-  \begin{block}{block}
-    block information
-  \end{block}
-  \begin{alertblock}{alertblock}
-    alertblock information
-  \end{alertblock}
-  \begin{exampleblock}{exampleblock}
-    exampleblock information
-  \end{exampleblock}
+\begin{frame}{Layer}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/layer}
+    \caption{Layer}
+  \end{figure}
 \end{frame}
 
-\subsection{second subsection}
-\begin{frame}
-  \frametitle{2.2}
-  \begin{enumerate}
-    \item yo're right
-    \begin{enumerate}
-      \item subitem 1
-      \item subitem 2
-    \end{enumerate}
-    \item hello
-  \end{enumerate}
+\begin{frame}{Circuit}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/circuit}
+    \caption{Basic Circuit}
+  \end{figure}
+\end{frame}
+
+\section{Electromagnetic Field}
+\subsection{Maxwell}
+\begin{frame}{Maxwell Equation}
+  \begin{columns}
+    \begin{column}{0.55\textwidth}
+      \begin{align*}
+        &\oint_l\vec{H}\cdot\mathrm{d}l=\int_S\vec{J}\cdot\mathrm{d}S+\int_S \frac{\partial\vec{D}}{\partial t}\cdot\mathrm{d}S \\
+        &\oint_l\vec{E}\cdot\mathrm{d}l=-\int_S\frac{\partial\vec{B}}{\partial t}\cdot\mathrm{d}S \\
+        &\oint_S\vec{B}\cdot\mathrm{d}S=0 \\
+        &\oint_S\vec{D}\cdot\mathrm{d}S=q \\
+      \end{align*}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{block}{关系}
+        \begin{align*}
+          &\vec{D}=\epsilon\vec{E} \Rightarrow \mbox{类似电容的关系} \\
+          &\vec{B}=\mu\vec{H} \Rightarrow \mbox{类似电感的关系} \\
+          &\vec{J}=\gamma\vec{E} \Rightarrow \mbox{类似电阻的关系} \\
+        \end{align*}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\subsection{Transmission Line}
+\begin{frame}{Telegrapher's Equation}
+  \begin{columns}
+    \begin{column}{0.45\textwidth}
+      \begin{figure}
+        \includegraphics[width=\textwidth]{figures/transmission}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.55\textwidth}
+      \begin{align*}
+        &-\frac{\partial v(z,t)}{\partial z}=\mathop{R'}i(z,t)+\mathop{L'}\frac{\partial i(z,t)}{\partial z} \\
+        &-\frac{\partial i(z,t)}{\partial z}=\mathop{G'}v(z,t)+\mathop{C'}\frac{\partial v(z,t)}{\partial z} \\
+      \end{align*}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \section{third section}
