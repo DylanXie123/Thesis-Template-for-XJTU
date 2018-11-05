@@ -188,6 +188,7 @@
     仿宋、斜体 & \verb|{\fang \slshape 测试}| & {\fang \slshape 测试} \\
     黑体、加粗 & \verb|{\hei \bfseries 测试}| & {\hei \bfseries 测试} \\
     宋体、加粗、小初号 & \verb|{\song \bfseries \zihao{-0} 测试}| & {\song \bfseries \zihao{-0} 测试} \\
+    西文 & \verb|{Time News Roman}| & {Time News Roman} \\
     \bottomrule
 \end{longtable}
 
@@ -259,9 +260,23 @@ biblatex宏包还给出了添加电子资源的样式：
 \end{figure}
 需要注意的是，有部分文档可能会出现信息不全，如\cite{成永红2001电力设备绝缘检测与诊断}缺少出版地，这时，我们需要手动添加所缺信息（添加\verb|location={陕西}|）。各类参考文献需要的信息可在biblatex文档中查看，也可直接查看编译后的参考文献是否缺失信息。
 
+\section{列表}
+\subsection{无序列表}
+\begin{itemize}
+    \item item 1
+    \item item 2
+    \item item 3
+\end{itemize}
+\subsection{有序列表}
+\begin{enumerate}
+    \item item 1
+    \item item 2
+    \item item 3
+\end{enumerate}
+
 \chapter{一些环境}
 
-algorithm环境
+Algorithm环境
 \begin{algorithm}
     \caption{Calculate $y = x^n$}
     \label{alg1}

@@ -2,7 +2,7 @@
 % Based on book
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{XJTUthesis}
-\LoadClass[UTF8,openany,linespread=1.2]{ctexbook}
+\LoadClass[UTF8,openany,scheme=plain,linespread=1.2]{ctexbook}
 
 %% Option provided
 \DeclareOption{bachelor}{\relax}
@@ -77,6 +77,8 @@
 \ctexset{
     contentsname     = {\zihao{3} 目 \qquad 录},
     bibname          = {\zihao{3} 参考文献},
+    figurename       = 图,
+    tablename        = 表,
     chapter={
         pagestyle    = fancy,
         format       = \zihao{3}\centering\bfseries,
