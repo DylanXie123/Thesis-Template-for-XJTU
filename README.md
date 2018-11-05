@@ -13,11 +13,7 @@
 ## 编译顺序
 
 ```
-xelatex -> biber -> xelatex -> xelatex
-```
-or
-```
-latexmk
+xelatex -> biber -> xelatex -> xelatex or latexmk
 ```
 实现一键编译请参考[DXie123的博客](https://dxie123.github.io/2018/07/11/latexcompile/)
 
