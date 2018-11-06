@@ -18,7 +18,10 @@ xelatex -> biber -> xelatex -> xelatex or latexmk
 实现一键编译请参考[DXie123的博客](https://dxie123.github.io/2018/07/11/latexcompile/)
 
 ## 使用方法
-[Thesis.pdf](https://github.com/DXie123/Thesis-Template-for-XJTU/blob/master/thesis.pdf)
+```
+\documentclass[bachelor]{XJTUthesis}
+```
+具体可参考[Thesis.pdf](https://github.com/DXie123/Thesis-Template-for-XJTU/blob/master/thesis.pdf)
 
 Contact me:
 [E-Mail](mailto:dylanxie123@outlook.com)
