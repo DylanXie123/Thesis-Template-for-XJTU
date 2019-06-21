@@ -5,7 +5,6 @@
 \usepackage{multicol}
 \usepackage{bm}
 
-\useoutertheme[footline=authorinstitutetitle]{miniframes}
 \useinnertheme{rectangles}
 
 \xdefinecolor{xjtured}{RGB}{200,22,30}
@@ -31,17 +30,8 @@
 \setbeamercolor{item projected}{bg=xjtublue}
 \setbeamercolor{subitem projected}{bg=xjtublue}
 
-\setbeamertemplate{enumerate subitem}[circle]
-\setbeamertemplate{itemize subitem}[circle]
-
 \setbeamertemplate{footline} 
 {%
-  \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
-    leftskip=.3cm,rightskip=.3cm]{author in head/foot}%
-    \insertshortauthor%
-    \hfill%
-    \insertshortinstitute%
-  \end{beamercolorbox}%
   \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
     leftskip=.3cm,rightskip=.3cm]{title in head/foot}%
     {\insertshorttitle}%
@@ -50,7 +40,7 @@
   \end{beamercolorbox}%
 }
 
-\logo{\includegraphics[height=10cm]{figures/a3_3jdxhgray.png}}
+% \logo{\includegraphics[height=10cm]{figures/a3_3jdxhgray.png}}
 
 \begin{document}
 
