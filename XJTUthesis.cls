@@ -2,7 +2,7 @@
 % Based on book
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{XJTUthesis}
-\LoadClass[UTF8,openany,scheme=plain,linespread=1.2]{ctexbook}
+\LoadClass[UTF8,zihao=-4,openany,scheme=plain,linespread=1.2]{ctexbook}
 
 %% Option provided
 \DeclareOption{bachelor}{\relax}
@@ -59,18 +59,13 @@
     \renewcommand{\xjtudegree}{本科}
 \fi
 
-\PassOptionsToPackage{no-math}{fontspec}
+% \PassOptionsToPackage{no-math}{fontspec}
 
 % font setting
-\setCJKmainfont[BoldFont = FandolSong-Bold]{FandolSong}
-\setCJKfamilyfont{song}[BoldFont =  FandolSong-Bold, AutoFakeSlant = true]{FandolSong}
-\newcommand{\song}{\CJKfamily{song}}
-\setCJKfamilyfont{hei}[BoldFont =  FandolHei-Bold, AutoFakeSlant = true]{FandolHei}
-\newcommand{\hei}{\CJKfamily{hei}}
-\setCJKfamilyfont{fang}[AutoFakeBold = 2, AutoFakeSlant = true]{FandolFang}
-\newcommand{\fang}{\CJKfamily{fang}}
-\setCJKfamilyfont{kai}[AutoFakeBold = 2, AutoFakeSlant = true]{FandolKai}
-\newcommand{\kai}{\CJKfamily{kai}}
+\setCJKfamilyfont{songti}[BoldFont = FandolSong-Bold]{宋体}
+\renewcommand{\songti}{\CJKfamily{songti}}
+\setCJKfamilyfont{heiti}[BoldFont = FandolHei-Bold]{黑体}
+\renewcommand{\heiti}{\CJKfamily{heiti}}
 \setmainfont{Times New Roman}
 
 % ctex setting
@@ -86,8 +81,8 @@
         name         = {},
         aftername    = \quad,
         afterindent  = true,
-        beforeskip   = {1\baselineskip}, %defalut 2\baselineskip
-        afterskip    = {2\baselineskip},
+        beforeskip   = {2\baselineskip},
+        afterskip    = {1\baselineskip},
     },
     section={
         format       = \zihao{-3}\raggedright\bfseries,
@@ -95,7 +90,7 @@
         name         = {},
         aftername    = \quad,
         afterindent  = true,
-        beforeskip   = {2\baselineskip},
+        beforeskip   = {1\baselineskip},
         afterskip    = {0.5\baselineskip},
     },
     subsection={
@@ -127,8 +122,8 @@
 
 %% margin setting
 \geometry{a4paper,top=3.0cm,bottom=2.5cm,left=2.6cm,right=2.6cm}
-\setlength{\headheight}{2cm} \setlength{\voffset}{-0.5in}
-\setlength{\headsep}{1cm} \setlength{\footskip}{0.75cm}
+\setlength{\headheight}{2cm} \setlength{\voffset}{-0.54cm} 
+\setlength{\footskip}{0.75cm}
 
 %% change the code of picture and table
 \renewcommand {\thetable}{\thechapter-\arabic{table}}
@@ -138,9 +133,9 @@
 %% head and foot
 \pagestyle{fancy}
 \fancyhead{}
-\fancyhead[CE]{\song \zihao{5} {西安交通大学毕业设
+\fancyhead[CE]{\songti \zihao{5} {西安交通大学毕业设
 计(论文)}}
-\fancyhead[CO]{\song \zihao{5} {
+\fancyhead[CO]{\songti \zihao{5} {
     \ifnum \value{page}=1 摘要
     \else \ifnum \value{theacknowledgement}>0 致谢
     \else \ifnum \value{theappendix}>1 附录
@@ -154,13 +149,13 @@
 % double line head
 \newcommand{\makeheadrule}{%
 \makebox[0pt][l]{\rule[0.5\baselineskip]{\headwidth}{0.5pt}}%
-\rule[0.58\baselineskip]{\headwidth}{0.5pt}}
+\rule[0.6\baselineskip]{\headwidth}{0.5pt}}
 \renewcommand{\headrule}{%
 {\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi \makeheadrule}}
 
 %% abstract && keywords
 \newenvironment{abstract}{
-    {\centering \song\zihao{3}{摘 \qquad 要} \par}
+    {\centering \songti\zihao{3}{摘 \qquad 要} \par}
     \zihao{-4}
 }{}
 
@@ -198,7 +193,7 @@
 \newcommand{\dlmu}[2]{\hskip 1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip 1pt}
 
 \newcommand{\cover}{
-    \bfseries
+    % \bfseries
     \begin{titlepage}
         \begin{figure}
           \centering
@@ -206,10 +201,10 @@
         \end{figure}
 
         \begin{center}
-            {\color{red} \fang \zihao{-0} 毕业设计（论文）}
+            {\color{red} \fangsong \zihao{-0} 毕业设计（论文）}
             \vskip 15ex
 
-            \zihao{3} \song
+            \zihao{3} \songti
             \begin{tabular}{ll}
               题 \quad 目 & \dlmu{11cm}{\@titlenamea} \\
                & \dlmu{11cm}{\@titlenameb} \\

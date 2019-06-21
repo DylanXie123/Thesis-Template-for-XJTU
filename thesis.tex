@@ -178,16 +178,16 @@
 \end{longtable}
 
 \section{字体}
-字体设置实例\footnote{字体改变推荐采用字体集的方式，需要同时加粗、斜体可采用textbf,emph命令}
+字体设置实例\footnote{字体改变推荐采用字体集的方式，需要同时加粗、斜体可采用textbf,emph命令，宋体和黑体提供了Bold字体}（默认为小四号字体）
 \begin{longtable}{ccc}
     \caption{字体设置实例}\\
     \toprule
     字体设置 & 命令 & 效果 \\
     \midrule
-    楷书、小初号、七号 & \verb|{\kai \zihao{7} 测试}| & {\kai \zihao{7} 测试} \\
-    仿宋、斜体 & \verb|{\fang \slshape 测试}| & {\fang \slshape 测试} \\
-    黑体、加粗 & \verb|{\hei \bfseries 测试}| & {\hei \bfseries 测试} \\
-    宋体、加粗、小初号 & \verb|{\song \bfseries \zihao{-0} 测试}| & {\song \bfseries \zihao{-0} 测试} \\
+    楷书、七号 & \verb|{\kaishu \zihao{7} 测试}| & {\kaishu \zihao{7} 测试} \\
+    仿宋、五号字体 & \verb|{\fangsong \zihao{5} 测试}| & {\fangsong \zihao{-4} 测试} \\
+    黑体、加粗 & \verb|{\heiti \bfseries 测试}| & {\heiti 测试} \\
+    宋体、加粗、小初号 & \verb|{\songti \bfseries \zihao{-0} 测试}| & {\songti \zihao{-0} 测试} \\
     西文 & \verb|{Time News Roman}| & {Time News Roman} \\
     \bottomrule
 \end{longtable}
