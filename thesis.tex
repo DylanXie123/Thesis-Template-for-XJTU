@@ -24,12 +24,14 @@
 \newpage
 
 \begin{abstract}
-    这是一个模板。这是一个模板。这是一个模板。这是一个模板。这是一个模板。这是一个模板。这是一个模板。这是一个模板。这是一个模板。这是一个模板。\cite{成永红2001电力设备绝缘检测与诊断}
+    这是一个模板。这是一个模板。这是一个模板。这是一个模板。这是一个模板。这是一个模板。这是一个模板。这是一个模板。这是一个模板。这是一个模板。\cite{成永红2001电力设备绝缘检测与诊断}\footnote{由于页码的问题，中英文摘要模板abstract,eabstract需要配合使用}\par
+    分段后是这样的。
 \end{abstract}
 \keywords{\LaTeX；XJTU}
 \newpage
 \begin{eabstract}
-    This is a template.This is a template.This is a template.This is a template.This is a template.This is a template.This is a template.
+    This is a template.This is a template.This is a template.This is a template.This is a template.This is a template.This is a template.\par
+    Now you get two paragraphs.
 \end{eabstract}
 \ekeywords{\LaTeX;XJTU}
 
@@ -225,8 +227,8 @@ int* BubbleSort(int* ary, int length)
   \item 引用多个参考文献\cite{成永红2001电力设备绝缘检测与诊断,成永红2004气体绝缘系统中典型缺陷的超宽频带放电信号的分形分析,吴锴2013纳米粒子改性聚乙烯直流电缆绝缘材料研究}
   \item 引用在线资源\cite{github}
 \end{itemize}
-引用参考文献只需在正文中相应位置插入\verb|\cite{}|。 \\
-打印参考文献表可用\verb|\printbibliography[heading=bibliography,title=参考文献]|。
+引用参考文献只需在正文中相应位置插入\verb|\cite{}|。\\
+参考文献表可用\verb|\printbibliography[heading=bibliography,title=参考文献]|。
 
 \subsection{bib文件介绍}
 \LaTeX 中的参考文献是通过参考文献数据源文件即bib文件实现的，bib文件中的一个参考文献格式如下：

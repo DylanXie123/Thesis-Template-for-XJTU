@@ -32,6 +32,7 @@
 \RequirePackage{listings}
 \RequirePackage{xcolor}
 \RequirePackage{pdfpages}
+\RequirePackage{afterpage}
 \RequirePackage[backend=biber,bibstyle=gb7714-2015,citestyle=gb7714-2015,seconds=true]{biblatex}
 \RequirePackage[colorlinks=true,pdfstartview=FitH,linkcolor=black,anchorcolor=violet,citecolor=black]{hyperref}
 
@@ -155,20 +156,22 @@
 
 %% abstract && keywords
 \newenvironment{abstract}{
-    {\centering \songti\zihao{3}{摘 \qquad 要} \par}
+    {\centering\bfseries\songti\zihao{3}{摘 \qquad 要}\par}
     \zihao{-4}
+    \pagenumbering{Roman}
 }{}
 
-\newcommand{\keywords}[1]{\\[\baselineskip] \zihao{5} \textbf{关键词：} \zihao{5} #1}
+\newcommand{\keywords}[1]{\\[\baselineskip] \zihao{-4} \textbf{关键词：} \zihao{-4} #1}
+
 % english version
 \newenvironment{eabstract}{
-    {\centering \zihao{3}{ABSTRACT} \par}
+    {\centering\bfseries\zihao{3}{ABSTRACT}\par}
     \zihao{-4}
     \setlength{\parskip}{0.5\baselineskip}
     \setlength{\parindent}{0em}
-}{}
+}{\afterpage{\pagenumbering{arabic}}}
 
-\newcommand{\ekeywords}[1]{\\[\baselineskip] \noindent \zihao{5} \textbf{KEY WORDS:} \zihao{5} #1}
+\newcommand{\ekeywords}[1]{\\[\baselineskip] \noindent \zihao{-4} \textbf{KEY WORDS:} \zihao{-4} #1}
 
 %% \firstpage
 \newcommand{\@titlenamea}{}
@@ -193,7 +196,6 @@
 \newcommand{\dlmu}[2]{\hskip 1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip 1pt}
 
 \newcommand{\cover}{
-    % \bfseries
     \begin{titlepage}
         \begin{figure}
           \centering
@@ -224,7 +226,6 @@
             \setcounter{page}{0}
         \end{center}
     \end{titlepage}
-    \mdseries
 }
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
