@@ -5,7 +5,10 @@
 \usepackage{multicol}
 \usepackage{bm}
 
+\useoutertheme{infolines}
 \useinnertheme{rectangles}
+\usecolortheme{whale}
+\usecolortheme{orchid}
 
 \xdefinecolor{xjtured}{RGB}{200,22,30}
 \xdefinecolor{xjturedbak}{RGB}{184,0,46}
@@ -15,32 +18,23 @@
 \xdefinecolor{xjtugreybak}{RGB}{92,54,9}
 
 \setbeamercolor{structure}{bg=xjtublue}
-\setbeamercolor{title}{fg=white}
-\setbeamercolor{section in head/foot}{fg=white,bg=xjtublue}
-\setbeamercolor{subsection in head/foot}{fg=white,bg=xjtubluebak}
-\setbeamercolor{frametitle}{fg=xjtublue,bg=xjtugrey}
-\setbeamercolor{author in head/foot}{fg=white,bg=xjtublue}
-\setbeamercolor{title in head/foot}{fg=white,bg=xjtublue}
+\setbeamercolor{title}{fg=white,bg=xjtublue}
+\setbeamercolor{frametitle}{fg=white,bg=xjtublue}
+\setbeamercolor{section in head/foot}{fg=white,bg=blue}
+\setbeamercolor{subsection in head/foot}{fg=white,bg=xjtublue}
+\setbeamercolor{author in head/foot}{fg=white,bg=xjtubluebak}
+\setbeamercolor{title in head/foot}{fg=white,bg=xjtubluebak}
+\setbeamercolor{page number in head/foot}{fg=white,bg=xjtubluebak}
+\setbeamercolor{date in head/foot}{fg=white,bg=xjtubluebak}
 \setbeamercolor{block title}{fg=white,bg=xjtubluebak}
 \setbeamercolor{block body}{bg=block title.bg!10!white}
-\setbeamercolor{block title example}{fg=white,bg=green}
-\setbeamercolor{block body example}{bg=block title example.bg!10!white}
-\setbeamercolor{block title alerted}{fg=white,bg=red}
-\setbeamercolor{block body alerted}{bg=block title alerted.bg!10!white}
 \setbeamercolor{item projected}{bg=xjtublue}
 \setbeamercolor{subitem projected}{bg=xjtublue}
 
-\setbeamertemplate{footline} 
-{%
-  \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
-    leftskip=.3cm,rightskip=.3cm]{title in head/foot}%
-    {\insertshorttitle}%
-    \hfill%
-    {\insertframenumber / \inserttotalframenumber}
-  \end{beamercolorbox}%
-}
-
-% \logo{\includegraphics[height=10cm]{figures/a3_3jdxhgray.png}}
+\title{Seminar One}
+\author{Dylan}
+\institute{XJTU}
+\titlegraphic{\includegraphics[height=2.5cm]{figures/a3_2jdxhblue.png}}
 
 \begin{document}
 
@@ -57,12 +51,7 @@
   \end{frame}
 }
 
-\title{Seminar One}
-\author{DX}
-\institute{XJTU}
-\begin{frame}
-  \titlepage
-\end{frame}
+\frame{\titlepage}
 
 \begin{frame}
   \frametitle{Outline}
