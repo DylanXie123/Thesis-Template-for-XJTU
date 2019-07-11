@@ -4,8 +4,10 @@
 \usepackage{subfigure}
 \usepackage{multicol}
 \usepackage{bm}
+\usepackage{calligra}
 
 \useoutertheme{infolines}
+% miniframes
 \useinnertheme{rectangles}
 \usecolortheme{whale}
 \usecolortheme{orchid}
@@ -16,20 +18,38 @@
 \xdefinecolor{xjtubluebak}{RGB}{0,46,230}
 \xdefinecolor{xjtugrey}{RGB}{220,220,221}
 \xdefinecolor{xjtugreybak}{RGB}{92,54,9}
+\xdefinecolor{xjtuorange}{RGB}{249,142,42}
 
 \setbeamercolor{structure}{bg=xjtublue}
 \setbeamercolor{title}{fg=white,bg=xjtublue}
 \setbeamercolor{frametitle}{fg=white,bg=xjtublue}
-\setbeamercolor{section in head/foot}{fg=white,bg=blue}
-\setbeamercolor{subsection in head/foot}{fg=white,bg=xjtublue}
-\setbeamercolor{author in head/foot}{fg=white,bg=xjtubluebak}
-\setbeamercolor{title in head/foot}{fg=white,bg=xjtubluebak}
-\setbeamercolor{page number in head/foot}{fg=white,bg=xjtubluebak}
-\setbeamercolor{date in head/foot}{fg=white,bg=xjtubluebak}
+\setbeamercolor{section in head/foot}{fg=white,bg=xjtublue!60!black}
+\setbeamercolor{author in head/foot}{fg=white,bg=xjtublue}
+\setbeamercolor{title in head/foot}{fg=white,bg=xjtublue}
+\setbeamercolor{date in head/foot}{fg=white,bg=xjtublue}
 \setbeamercolor{block title}{fg=white,bg=xjtubluebak}
 \setbeamercolor{block body}{bg=block title.bg!10!white}
 \setbeamercolor{item projected}{bg=xjtublue}
 \setbeamercolor{subitem projected}{bg=xjtublue}
+
+\setbeamertemplate{headline}
+{%
+  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt \insertsectionnavigationhorizontal{\paperwidth}{}{} \vskip2pt
+  \end{beamercolorbox}%
+  
+  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+  \end{beamercolorbox}
+}
+
+\newcommand<>{\endpage}{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=.5\paperheight,dp=.5\paperheight]{structure}
+    \centering\Huge\calligra\color{white} Thank you!
+  \end{beamercolorbox}
+}
 
 \title{Seminar One}
 \author{Dylan}
@@ -130,5 +150,7 @@
   \frametitle{3}
   test information
 \end{frame}
+
+\frame[plain]{\endpage}
 
 \end{document} 
