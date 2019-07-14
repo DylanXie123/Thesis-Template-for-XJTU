@@ -5,6 +5,9 @@
 \usepackage{multicol}
 \usepackage{bm}
 \usepackage{calligra}
+\usepackage[backend=biber,bibstyle=gb7714-2015,citestyle=gb7714-2015,seconds=true]{biblatex}
+
+\bibliography{reference//example.bib}
 
 \useoutertheme{infolines}
 % miniframes
@@ -106,7 +109,7 @@
 
 \section{Electromagnetic Field}
 \subsection{Maxwell}
-\begin{frame}{Maxwell Equation}
+\begin{frame}{Maxwell Equation\cite{冯慈璋2000工程电磁场导论}}
   \begin{columns}
     \begin{column}{0.55\textwidth}
       \begin{align*}
@@ -119,7 +122,7 @@
     \begin{column}{0.45\textwidth}
       \begin{block}{关系}
         \begin{align*}
-          &\vec{D}=\epsilon\vec{E} \Rightarrow \mbox{类似电容的关系} \\
+          &\vec{D}=\varepsilon\vec{E} \Rightarrow \mbox{类似电容的关系} \\
           &\vec{B}=\mu\vec{H} \Rightarrow \mbox{类似电感的关系} \\
           &\vec{J}=\gamma\vec{E} \Rightarrow \mbox{类似电阻的关系} \\
         \end{align*}
@@ -148,7 +151,11 @@
 \section{third section}
 \begin{frame}
   \frametitle{3}
-  test information
+  test information\cite{吴锴2013纳米粒子改性聚乙烯直流电缆绝缘材料研究}
+\end{frame}
+
+\begin{frame}{Reference}
+  \printbibliography[heading=bibliography,title=参考文献]
 \end{frame}
 
 \frame[plain]{\endpage}
