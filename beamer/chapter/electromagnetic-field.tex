@@ -1,0 +1,41 @@
+\section{Electromagnetic Field}
+\subsection{Maxwell}
+\begin{frame}{Maxwell Equation\cite{冯慈璋2000工程电磁场导论}}
+  \begin{columns}
+    \begin{column}{0.55\textwidth}
+      \begin{align*}
+        &\oint_l\vec{H}\cdot\mathrm{d}l=\int_S\vec{J}\cdot\mathrm{d}S+\int_S \frac{\partial\vec{D}}{\partial t}\cdot\mathrm{d}S \\
+        &\oint_l\vec{E}\cdot\mathrm{d}l=-\int_S\frac{\partial\vec{B}}{\partial t}\cdot\mathrm{d}S \\
+        &\oint_S\vec{B}\cdot\mathrm{d}S=0 \\
+        &\oint_S\vec{D}\cdot\mathrm{d}S=q \\
+      \end{align*}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \begin{block}{关系}
+        \begin{align*}
+          &\vec{D}=\varepsilon\vec{E} \Rightarrow \mbox{类似电容的关系} \\
+          &\vec{B}=\mu\vec{H} \Rightarrow \mbox{类似电感的关系} \\
+          &\vec{J}=\gamma\vec{E} \Rightarrow \mbox{类似电阻的关系} \\
+        \end{align*}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\subsection{Transmission Line}
+\begin{frame}{Telegrapher's Equation}
+  \begin{columns}
+    \begin{column}{0.45\textwidth}
+      \begin{figure}
+        \includegraphics[width=\textwidth]{figures/transmission}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.55\textwidth}
+      \begin{align*}
+        &-\frac{\partial v(z,t)}{\partial z}=\mathop{R'}i(z,t)+\mathop{L'}\frac{\partial i(z,t)}{\partial z} \\
+        &-\frac{\partial i(z,t)}{\partial z}=\mathop{G'}v(z,t)+\mathop{C'}\frac{\partial v(z,t)}{\partial z} \\
+      \end{align*}
+    \end{column}
+  \end{columns}
+\end{frame}
+
