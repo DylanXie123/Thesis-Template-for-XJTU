@@ -1,3 +1,4 @@
+# ***本项目已不再更新，为确保论文格式准确，请使用[学校官方模板](http://gs.xjtu.edu.cn/info/1209/5614.htm)***
 # 西安交大毕业设计模板
 ![](https://img.shields.io/badge/language-latex-orange.svg)
 ![](https://img.shields.io/badge/license-GPLV3-red.svg)
